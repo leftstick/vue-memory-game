@@ -7,6 +7,9 @@
 <script>
 import Card from './Card';
 
+const cardNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
+    'that-guy', 'zeppelin'];
+
 export default {
 
     data: function() {
@@ -35,7 +38,7 @@ export default {
 
 <style scoped>
 .chessboard{
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
     background-color: #fff;
     height: 530px;

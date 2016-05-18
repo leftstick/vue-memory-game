@@ -12,6 +12,15 @@ export default {
     },
 
     props: {
+        option: {
+            type: Object,
+            default: function () {
+                return {
+                    flipped: false,
+                    cardName: ''
+                };
+            }
+        }
     },
 
     computed: {

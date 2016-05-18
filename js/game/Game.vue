@@ -41,7 +41,7 @@ export default {
 <style scoped>
 .game-panel{
     width: 450px;
-    height: 750px;
+    height: 670px;
     border: 4px solid #BDBDBD;
     border-radius: 2px;
     background-color: #faf8ef;

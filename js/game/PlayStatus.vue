@@ -34,9 +34,10 @@ export default {
 
 <style scoped>
 .status-footer{
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
-    height: 25px;
+    height: 20px;
+    line-height: 20px;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
