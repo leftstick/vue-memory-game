@@ -1,17 +1,23 @@
 <template>
     <div class="status-footer">
-        <span v-if="status === 'READY'">Ready</span>
-        <span v-if="status === 'PLAYING'">Playing</span>
-        <a v-if="status === 'PASS'" v-on:click.prevent.stop="reset()" href>Play again</a>
+        <span v-if="status === READY">Ready</span>
+        <span v-if="status === PLAYING">Playing</span>
+        <a v-if="status === PASS" v-on:click.prevent.stop="reset()" href>Play again</a>
         <span class="elapsed">{{ elapsedMs }} s</span>
     </div>
 </template>
 
 <script>
-import { reset } from 'js/vuex/actions/controlCenter';
-import { status, elapsedMs } from 'js/vuex/getters/stateHolder';
+import { reset } from 'vuex/actions/controlCenter';
+import { status, elapsedMs } from 'vuex/getters/stateHolder';
+
+import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
+
+    data: function() {
+        return STATUS;
+    },
 
     vuex: {
         actions: {

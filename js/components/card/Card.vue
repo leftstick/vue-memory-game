@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { flipCard } from 'js/vuex/actions/controlCenter';
+import { flipCard } from 'vuex/actions/controlCenter';
 
 export default {
 

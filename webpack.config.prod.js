@@ -28,14 +28,15 @@ module.exports = {
                 loader: 'style!css'
             },
             {
-                test: /\.(png)\w*/,
+                test: /\.(png)$/,
                 loader: 'file'
             }
         ]
     },
     resolve: {
         root: [
-            path.resolve(__dirname)
+            path.resolve(__dirname),
+            path.resolve(__dirname, 'js')
         ],
         extensions: [
             '',

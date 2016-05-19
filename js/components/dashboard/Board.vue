@@ -7,7 +7,7 @@
 
 <script>
 
-import { leftMatched } from 'js/vuex/getters/stateHolder';
+import { leftMatched } from 'vuex/getters/stateHolder';
 
 export default {
     vuex: {

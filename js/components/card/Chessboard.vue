@@ -7,8 +7,10 @@
 <script>
 import Card from './Card';
 
-import { reset, updateStatus, match, flipCards } from 'js/vuex/actions/controlCenter';
+import { updateStatus, match, flipCards } from 'js/vuex/actions/controlCenter';
 import { leftMatched, cards, status } from 'js/vuex/getters/stateHolder';
+
+import { STATUS } from 'js/vuex/store/statusEnum';
 
 export default {
 
@@ -20,7 +22,6 @@ export default {
 
     vuex: {
         actions: {
-            reset,
             updateStatus,
             match,
             flipCards
@@ -32,15 +33,11 @@ export default {
         }
     },
 
-    created: function() {
-        this.reset();
-    },
-
     methods: {
 
         onFlipped: function(e) {
-            if(this.status === 'READY'){
-                this.updateStatus('PLAYING');
+            if(this.status === STATUS.READY){
+                this.updateStatus(STATUS.PLAYING);
             }
             if(!this.lastCard){
                 return this.lastCard = e;
@@ -48,10 +45,7 @@ export default {
             if(this.lastCard !== e && this.lastCard.cardName === e.cardName){
                 this.lastCard = null;
                 this.match();
-                if(!this.leftMatched){
-                    return this.updateStatus('PASS');
-                }
-                return;
+                return this.leftMatched || this.updateStatus(STATUS.PASS);
             }
             let lastCard = this.lastCard;
             this.lastCard = null;
