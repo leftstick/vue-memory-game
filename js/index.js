@@ -1,6 +1,6 @@
 import 'css/main.css';
 import Vue from 'vue';
-import Game from './game/Game';
+import Game from './components/Game';
 import store from 'js/vuex/store/store';
 
 
