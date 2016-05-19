@@ -1,18 +1,17 @@
 <template>
     <div class="score">
-        <span>Highest Score</span>
-        <h2>{{ highestScore }}</h2>
+        <span>Highest Speed</span>
+        <h2>{{ highestSpeed }}</h2>
     </div>
 </template>
 
 <script>
+import { highestSpeed } from 'js/vuex/getters/stateHolder';
 
 export default {
-    props: {
-        highestScore: {
-            type: Number,
-            twoWay: false,
-            default: 0
+    vuex: {
+        getters: {
+            highestSpeed
         }
     }
 }

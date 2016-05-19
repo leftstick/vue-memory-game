@@ -12,26 +12,18 @@ import BoardPanel from './board/BoardPanel';
 import Chessboard from './card/Chessboard';
 import Status from './PlayStatus';
 
+import { updateStatus } from 'js/vuex/actions/controlCenter';
+
 export default {
 
-    data: function() {
-        return {
-        };
-    },
-
-    props: {
-    },
-
-    computed: {
+    vuex: {
+        actions: {
+            updateStatus
+        }
     },
 
     created: function() {
-    },
-
-    beforeDestroy: function() {
-    },
-
-    methods: {
+        this.updateStatus();
     },
 
     components: {BoardPanel, Chessboard, Status}

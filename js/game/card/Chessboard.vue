@@ -1,35 +1,65 @@
 <template>
     <div class="chessboard">
-        <Card v-for="n in 16"></Card>
+        <Card v-for="cart in cards" :option="cart" v-on:flipped="onFlipped"></Card>
     </div>
 </template>
 
 <script>
 import Card from './Card';
 
-const cardNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
-    'that-guy', 'zeppelin'];
+import { reset, updateStatus, match, flipCards } from 'js/vuex/actions/controlCenter';
+import { leftMatched, cards, status } from 'js/vuex/getters/stateHolder';
 
 export default {
 
     data: function() {
         return {
+            lastCard: null
         };
     },
 
-    props: {
-    },
-
-    computed: {
+    vuex: {
+        actions: {
+            reset,
+            updateStatus,
+            match,
+            flipCards
+        },
+        getters: {
+            leftMatched,
+            cards,
+            status
+        }
     },
 
     created: function() {
-    },
-
-    beforeDestroy: function() {
+        this.reset();
     },
 
     methods: {
+
+        onFlipped: function(e) {
+            if(this.status === 'READY'){
+                this.updateStatus('PLAYING');
+            }
+            if(!this.lastCard){
+                return this.lastCard = e;
+            }
+            if(this.lastCard !== e && this.lastCard.cardName === e.cardName){
+                this.lastCard = null;
+                this.match();
+                if(!this.leftMatched){
+                    return this.updateStatus('PASS');
+                }
+                return;
+            }
+            let lastCard = this.lastCard;
+            this.lastCard = null;
+            setTimeout(() =>{
+                this.flipCards([lastCard, e]);
+            }, 1000);
+        }
+
     },
 
     components: {Card}
@@ -52,7 +82,7 @@ export default {
     align-content: space-around;
 }
 
-.card:nth-child(4n){
+.container:nth-child(4n){
     margin-right: 0px;
 }
 </style>

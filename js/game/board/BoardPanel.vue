@@ -14,26 +14,6 @@ import Score from './Score';
 
 export default {
 
-    data: function() {
-        return {
-        };
-    },
-
-    props: {
-    },
-
-    computed: {
-    },
-
-    created: function() {
-    },
-
-    beforeDestroy: function() {
-    },
-
-    methods: {
-    },
-
     components: {Logo, Board, Score}
 }
 </script>

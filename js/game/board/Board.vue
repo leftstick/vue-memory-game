@@ -1,18 +1,18 @@
 <template>
     <div class="board">
         <span>Pairs Left To Match</span>
-        <h2>{{ leftNum }}</h2>
+        <h2>{{ leftMatched }}</h2>
     </div>
 </template>
 
 <script>
 
+import { leftMatched } from 'js/vuex/getters/stateHolder';
+
 export default {
-    props: {
-        leftNum: {
-            type: Number,
-            twoWay: false,
-            default: 0
+    vuex: {
+        getters: {
+            leftMatched
         }
     }
 }
