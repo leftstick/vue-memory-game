@@ -56,4 +56,8 @@ const mutations = {
     }
 };
 
-export default new Vuex.Store({state, mutations});
+export default new Vuex.Store({
+    state,
+    mutations,
+    strict: process.env.NODE_ENV !== 'production'
+});
