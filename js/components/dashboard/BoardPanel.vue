@@ -13,7 +13,6 @@ import Board from './Board';
 import Score from './Score';
 
 export default {
-
     components: {Logo, Board, Score}
 }
 </script>

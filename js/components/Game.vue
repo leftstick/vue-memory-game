@@ -8,7 +8,7 @@
 
 <script>
 
-import BoardPanel from './board/BoardPanel';
+import BoardPanel from './dashboard/BoardPanel';
 import Chessboard from './card/Chessboard';
 import Status from './footer/PlayStatus';
 
@@ -23,7 +23,7 @@ export default {
     },
 
     created: function() {
-        this.updateStatus();
+        this.updateStatus('READY');
     },
 
     components: {BoardPanel, Chessboard, Status}

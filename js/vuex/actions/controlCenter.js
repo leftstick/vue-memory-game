@@ -1,11 +1,13 @@
 
 import {shuffle} from 'js/lib/shuffle';
 
+import {RESET, UPDATE_STATUS, COUNTING, UPDATE_HIGHESTSPEED, FLIP, FLIPS, DECREASE_MATCH} from './types';
+
 const cardNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
     'that-guy', 'zeppelin'];
 
 export const reset = function({dispatch, state}) {
-    dispatch('RESET', {
+    dispatch(RESET, {
         leftMatched: 8,
         highestSpeed: localStorage.getItem('highestSpeed') || 0,
         status: 'READY',
@@ -17,27 +19,32 @@ export const reset = function({dispatch, state}) {
 
 let timerId;
 
-export const updateStatus = function({dispatch, state}, status) {
-    dispatch('UPDATE-STATUS', status || 'READY');
-    if (status === 'PLAYING') {
+let statusHandler = {
+    PLAYING: function(dispatch) {
         timerId = setInterval(function() {
-            dispatch('COUNTING');
+            dispatch(COUNTING);
         }, 1000);
+    },
 
-    } else if (status === 'PASS') {
+    PASS: function(dispatch) {
         clearInterval(timerId);
-        dispatch('UPDATE-HIGHESTSPEED');
+        dispatch(UPDATE_HIGHESTSPEED);
     }
 };
 
+export const updateStatus = function({dispatch, state}, status) {
+    dispatch(UPDATE_STATUS, status);
+    statusHandler[status] && statusHandler[status](dispatch);
+};
+
 export const flipCard = function({dispatch, state}, card) {
-    dispatch('FLIP', card);
+    dispatch(FLIP, card);
 };
 
 export const flipCards = function({dispatch, state}, cards) {
-    dispatch('FLIPS', cards);
+    dispatch(FLIPS, cards);
 };
 
 export const match = function({dispatch, state}) {
-    dispatch('DECREASE-MATCH', 1);
+    dispatch(DECREASE_MATCH);
 };
