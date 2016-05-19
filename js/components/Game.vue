@@ -10,7 +10,7 @@
 
 import BoardPanel from './board/BoardPanel';
 import Chessboard from './card/Chessboard';
-import Status from './PlayStatus';
+import Status from './footer/PlayStatus';
 
 import { updateStatus } from 'js/vuex/actions/controlCenter';
 
