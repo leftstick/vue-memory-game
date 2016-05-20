@@ -14,4 +14,4 @@ A tiny game written in vue. It's inspired by IgorMinar's [Memory-Game](https://g
 
 
 [david-url]: https://david-dm.org/leftstick/vue-memory-game.png
-[license-url]:https://img.shields.io/npm/l/vue-memory-game.svg
+[license-url]: https://img.shields.io/github/license/leftstick/vue-memory-game.svg
