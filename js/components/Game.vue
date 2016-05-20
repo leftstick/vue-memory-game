@@ -1,5 +1,6 @@
 <template>
     <div class="game-panel">
+       <!-- 组装上、中、下三个部分组件 -->
        <Dashboard></Dashboard>
        <Chessboard></Chessboard>
        <Status></Status>
@@ -16,6 +17,9 @@ import { reset, updateStatus } from 'vuex/actions/controlCenter';
 import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
+
+    //vuex是一个特殊的属性，actions放在里面，
+    //省却了我们手动传入this.$store的麻烦
 
     vuex: {
         actions: {

@@ -67,9 +67,8 @@ export default {
     background-color: #fff;
     height: 530px;
     border-radius: 4px;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
