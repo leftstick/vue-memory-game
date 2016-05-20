@@ -7,8 +7,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: '[name].[hash].bundle.js',
-        chunkFilename: '[id].bundle.js'
+        filename: '[name].[hash].bundle.js'
     },
     debug: true,
     devtool: '#eval-source-map',
