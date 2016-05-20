@@ -1,7 +1,7 @@
 <template>
     <div class="status-bar">
        <Logo></Logo>
-       <Board></Board>
+       <Match-info></Match-info>
        <Score></Score>
     </div>
 </template>
@@ -9,11 +9,11 @@
 <script>
 
 import Logo from './Logo';
-import Board from './Board';
+import MatchInfo from './MatchInfo';
 import Score from './Score';
 
 export default {
-    components: {Logo, Board, Score}
+    components: {Logo, MatchInfo, Score}
 }
 </script>
 
