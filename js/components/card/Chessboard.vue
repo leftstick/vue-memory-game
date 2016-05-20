@@ -7,7 +7,7 @@
 <script>
 import Card from './Card';
 
-import { reset, updateStatus, match, flipCards } from 'js/vuex/actions/controlCenter';
+import { updateStatus, match, flipCards } from 'js/vuex/actions/controlCenter';
 import { leftMatched, cards, status } from 'js/vuex/getters/stateHolder';
 
 import { STATUS } from 'js/vuex/store/statusEnum';
@@ -22,7 +22,6 @@ export default {
 
     vuex: {
         actions: {
-            reset,
             updateStatus,
             match,
             flipCards
@@ -32,10 +31,6 @@ export default {
             cards,
             status
         }
-    },
-
-    created: function() {
-        this.reset();
     },
 
     methods: {
@@ -50,10 +45,7 @@ export default {
             if(this.lastCard !== e && this.lastCard.cardName === e.cardName){
                 this.lastCard = null;
                 this.match();
-                if(!this.leftMatched){
-                    return this.updateStatus(STATUS.PASS);
-                }
-                return;
+                return this.leftMatched || this.updateStatus(STATUS.PASS);
             }
             let lastCard = this.lastCard;
             this.lastCard = null;

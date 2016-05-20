@@ -12,19 +12,21 @@ import BoardPanel from './dashboard/BoardPanel';
 import Chessboard from './card/Chessboard';
 import Status from './footer/PlayStatus';
 
-import { updateStatus } from 'vuex/actions/controlCenter';
+import { reset, updateStatus } from 'vuex/actions/controlCenter';
 import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
 
     vuex: {
         actions: {
+            reset,
             updateStatus
         }
     },
 
     created: function() {
         this.updateStatus(STATUS.READY);
+        this.reset();
     },
 
     components: {BoardPanel, Chessboard, Status}
