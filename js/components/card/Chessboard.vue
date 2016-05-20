@@ -10,6 +10,8 @@ import Card from './Card';
 import { reset, updateStatus, match, flipCards } from 'js/vuex/actions/controlCenter';
 import { leftMatched, cards, status } from 'js/vuex/getters/stateHolder';
 
+import { STATUS } from 'js/vuex/store/statusEnum';
+
 export default {
 
     data: function() {
@@ -39,8 +41,8 @@ export default {
     methods: {
 
         onFlipped: function(e) {
-            if(this.status === 'READY'){
-                this.updateStatus('PLAYING');
+            if(this.status === STATUS.READY){
+                this.updateStatus(STATUS.PLAYING);
             }
             if(!this.lastCard){
                 return this.lastCard = e;
@@ -49,7 +51,7 @@ export default {
                 this.lastCard = null;
                 this.match();
                 if(!this.leftMatched){
-                    return this.updateStatus('PASS');
+                    return this.updateStatus(STATUS.PASS);
                 }
                 return;
             }

@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import {TYPES} from 'vuex/actions/types';
+
 //have vuex involved
 Vue.use(Vuex);
 
@@ -13,7 +15,7 @@ const state = {
 };
 
 const mutations = {
-    RESET(st, newState) {
+    [TYPES.RESET](st, newState) {
         st.leftMatched = newState.leftMatched;
         st.highestSpeed = newState.highestSpeed;
         st.status = newState.status;
@@ -21,20 +23,20 @@ const mutations = {
         st.elapsedMs = newState.elapsedMs;
     },
 
-    'UPDATE-STATUS'(st, newStatus) {
+    [TYPES.UPDATE_STATUS](st, newStatus) {
         st.status = newStatus;
     },
 
-    'DECREASE-MATCH'(st) {
+    [TYPES.DECREASE_MATCH](st) {
         st.leftMatched--;
     },
 
-    FLIP(st, card) {
+    [TYPES.FLIP](st, card) {
         var c = st.cards.find(cc => cc === card);
         c.flipped = !c.flipped;
     },
 
-    FLIPS(st, cards) {
+    [TYPES.FLIPS](st, cards) {
         st.cards
             .filter(cc => cards.indexOf(cc) >= 0)
             .forEach(cc => {
@@ -42,11 +44,11 @@ const mutations = {
             });
     },
 
-    COUNTING(st) {
+    [TYPES.COUNTING](st) {
         st.elapsedMs++;
     },
 
-    'UPDATE-HIGHESTSPEED'(st) {
+    [TYPES.UPDATE_HIGHESTSPEED](st) {
         if (!localStorage.getItem('highestSpeed')) {
             return localStorage.setItem('highestSpeed', st.elapsedMs);
         }

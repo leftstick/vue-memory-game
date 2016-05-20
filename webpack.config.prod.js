@@ -35,7 +35,8 @@ module.exports = {
     },
     resolve: {
         root: [
-            path.resolve(__dirname)
+            path.resolve(__dirname),
+            path.resolve(__dirname, 'js')
         ],
         extensions: [
             '',

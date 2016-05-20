@@ -1,14 +1,10 @@
 
-export const RESET = 'RESET';
-
-export const UPDATE_STATUS = 'UPDATE-STATUS';
-
-export const COUNTING = 'COUNTING';
-
-export const UPDATE_HIGHESTSPEED = 'UPDATE-HIGHESTSPEED';
-
-export const FLIP = 'FLIP';
-
-export const FLIPS = 'FLIPS';
-
-export const DECREASE_MATCH = 'DECREASE-MATCH';
+export const TYPES = {
+    RESET: 'RESET',
+    UPDATE_STATUS: 'UPDATE-STATUS',
+    COUNTING: 'COUNTING',
+    UPDATE_HIGHESTSPEED: 'UPDATE-HIGHESTSPEED',
+    FLIP: 'FLIP',
+    FLIPS: 'FLIPS',
+    DECREASE_MATCH: 'DECREASE-MATCH'
+};

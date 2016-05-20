@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { highestSpeed } from 'js/vuex/getters/stateHolder';
+import { highestSpeed } from 'vuex/getters/stateHolder';
 
 export default {
     vuex: {

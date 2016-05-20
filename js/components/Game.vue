@@ -12,7 +12,8 @@ import BoardPanel from './dashboard/BoardPanel';
 import Chessboard from './card/Chessboard';
 import Status from './footer/PlayStatus';
 
-import { updateStatus } from 'js/vuex/actions/controlCenter';
+import { updateStatus } from 'vuex/actions/controlCenter';
+import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
 
@@ -23,7 +24,7 @@ export default {
     },
 
     created: function() {
-        this.updateStatus('READY');
+        this.updateStatus(STATUS.READY);
     },
 
     components: {BoardPanel, Chessboard, Status}

@@ -1,16 +1,17 @@
 
-import {shuffle} from 'js/lib/shuffle';
+import {shuffle} from 'lib/shuffle';
+import {STATUS} from 'vuex/store/statusEnum';
 
-import {RESET, UPDATE_STATUS, COUNTING, UPDATE_HIGHESTSPEED, FLIP, FLIPS, DECREASE_MATCH} from './types';
+import {TYPES} from './types';
 
 const cardNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
     'that-guy', 'zeppelin'];
 
 export const reset = function({dispatch, state}) {
-    dispatch(RESET, {
+    dispatch(TYPES.RESET, {
         leftMatched: 8,
-        highestSpeed: localStorage.getItem('highestSpeed') || 0,
-        status: 'READY',
+        highestSpeed: localStorage.getItem('highestSpeed') || 9999,
+        status: STATUS.READY,
         cards: shuffle(cardNames.concat(cardNames))
             .map(name => ({flipped: false, cardName: name})),
         elapsedMs: 0
@@ -22,29 +23,29 @@ let timerId;
 let statusHandler = {
     PLAYING: function(dispatch) {
         timerId = setInterval(function() {
-            dispatch(COUNTING);
+            dispatch(TYPES.COUNTING);
         }, 1000);
     },
 
     PASS: function(dispatch) {
         clearInterval(timerId);
-        dispatch(UPDATE_HIGHESTSPEED);
+        dispatch(TYPES.UPDATE_HIGHESTSPEED);
     }
 };
 
 export const updateStatus = function({dispatch, state}, status) {
-    dispatch(UPDATE_STATUS, status);
+    dispatch(TYPES.UPDATE_STATUS, status);
     statusHandler[status] && statusHandler[status](dispatch);
 };
 
 export const flipCard = function({dispatch, state}, card) {
-    dispatch(FLIP, card);
+    dispatch(TYPES.FLIP, card);
 };
 
 export const flipCards = function({dispatch, state}, cards) {
-    dispatch(FLIPS, cards);
+    dispatch(TYPES.FLIPS, cards);
 };
 
 export const match = function({dispatch, state}) {
-    dispatch(DECREASE_MATCH);
+    dispatch(TYPES.DECREASE_MATCH);
 };
