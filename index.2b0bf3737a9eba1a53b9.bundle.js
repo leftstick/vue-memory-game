@@ -101,7 +101,7 @@
 
 
 	// module
-	exports.push([module.id, "* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nhtml, body {\n    width: 100%;\n    height: 100%;\n}\n\nbody {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: center;\n    align-items: center;\n}\n", ""]);
+	exports.push([module.id, "* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nhtml, body {\n    width: 100%;\n    height: 100%;\n}\n\nbody {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n", ""]);
 
 	// exports
 
@@ -10648,9 +10648,9 @@
 	    value: true
 	});
 
-	var _BoardPanel = __webpack_require__(11);
+	var _Dashboard = __webpack_require__(11);
 
-	var _BoardPanel2 = _interopRequireDefault(_BoardPanel);
+	var _Dashboard2 = _interopRequireDefault(_Dashboard);
 
 	var _Chessboard = __webpack_require__(32);
 
@@ -10680,7 +10680,7 @@
 	        this.reset();
 	    },
 
-	    components: { BoardPanel: _BoardPanel2.default, Chessboard: _Chessboard2.default, Status: _PlayStatus2.default }
+	    components: { Dashboard: _Dashboard2.default, Chessboard: _Chessboard2.default, Status: _PlayStatus2.default }
 	};
 
 /***/ },
@@ -10693,7 +10693,7 @@
 	__webpack_require__(12);
 	__vue_script__ = __webpack_require__(14);
 	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/dashboard/BoardPanel.vue: named exports in *.vue files are ignored.");
+	  console.warn("[vue-loader] js/components/dashboard/Dashboard.vue: named exports in *.vue files are ignored.");
 	}
 	__vue_template__ = __webpack_require__(31);
 	module.exports = __vue_script__ || {};
@@ -10707,7 +10707,7 @@
 	    var hotAPI = require("vue-hot-reload-api");
 	    hotAPI.install(require("vue"), true);
 	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/BoardPanel.vue";
+	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/Dashboard.vue";
 	    if (!module.hot.data) {
 	      hotAPI.createRecord(id, module.exports);
 	    } else {
@@ -10732,8 +10732,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-47f1fbae&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./BoardPanel.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-47f1fbae&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./BoardPanel.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3e97dad4&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Dashboard.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3e97dad4&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Dashboard.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10751,7 +10751,7 @@
 
 
 	// module
-	exports.push([module.id, "\n.status-bar[_v-47f1fbae]{\n    width: 100%;\n    height: 100px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n    -webkit-justify-content: space-between;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n", ""]);
+	exports.push([module.id, "\n.status-bar[_v-3e97dad4]{\n    width: 100%;\n    height: 100px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n    -webkit-justify-content: space-between;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n", ""]);
 
 	// exports
 
@@ -10770,9 +10770,9 @@
 
 	var _Logo2 = _interopRequireDefault(_Logo);
 
-	var _Board = __webpack_require__(20);
+	var _MatchInfo = __webpack_require__(20);
 
-	var _Board2 = _interopRequireDefault(_Board);
+	var _MatchInfo2 = _interopRequireDefault(_MatchInfo);
 
 	var _Score = __webpack_require__(26);
 
@@ -10781,7 +10781,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-	    components: { Logo: _Logo2.default, Board: _Board2.default, Score: _Score2.default }
+	    components: { Logo: _Logo2.default, MatchInfo: _MatchInfo2.default, Score: _Score2.default }
 	};
 
 /***/ },
@@ -10884,7 +10884,7 @@
 	__webpack_require__(21);
 	__vue_script__ = __webpack_require__(23);
 	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/dashboard/Board.vue: named exports in *.vue files are ignored.");
+	  console.warn("[vue-loader] js/components/dashboard/MatchInfo.vue: named exports in *.vue files are ignored.");
 	}
 	__vue_template__ = __webpack_require__(25);
 	module.exports = __vue_script__ || {};
@@ -10898,7 +10898,7 @@
 	    var hotAPI = require("vue-hot-reload-api");
 	    hotAPI.install(require("vue"), true);
 	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/Board.vue";
+	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/MatchInfo.vue";
 	    if (!module.hot.data) {
 	      hotAPI.createRecord(id, module.exports);
 	    } else {
@@ -10923,8 +10923,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-619d7a26&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Board.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-619d7a26&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Board.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1aa860d3&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MatchInfo.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1aa860d3&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MatchInfo.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10942,7 +10942,7 @@
 
 
 	// module
-	exports.push([module.id, "\n.board[_v-619d7a26]{\n    width: 120px;\n    height: 100px;\n    padding: 10px;\n    background-color: #bbada0;\n    border-radius: 5px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: column;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: justify;\n    -webkit-justify-content: space-between;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center;\n    color: #eae0d1;\n}\n\nspan[_v-619d7a26]{\n    font-size: 19px;\n    font-weight: bold;\n    display: block;\n    width: 100%;\n    text-align: center;\n}\n\nh2[_v-619d7a26]{\n    color: #fff;\n}\n", ""]);
+	exports.push([module.id, "\n.board[_v-1aa860d3]{\n    width: 120px;\n    height: 100px;\n    padding: 10px;\n    background-color: #bbada0;\n    border-radius: 5px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: column;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: justify;\n    -webkit-justify-content: space-between;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center;\n    color: #eae0d1;\n}\n\nspan[_v-1aa860d3]{\n    font-size: 19px;\n    font-weight: bold;\n    display: block;\n    width: 100%;\n    text-align: center;\n}\n\nh2[_v-1aa860d3]{\n    color: #fff;\n}\n", ""]);
 
 	// exports
 
@@ -11000,7 +11000,7 @@
 /* 25 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"board\" _v-619d7a26=\"\">\n    <span _v-619d7a26=\"\">Pairs Left To Match</span>\n    <h2 _v-619d7a26=\"\">{{ leftMatched }}</h2>\n</div>\n";
+	module.exports = "\n<div class=\"board\" _v-1aa860d3=\"\">\n    <span _v-1aa860d3=\"\">Pairs Left To Match</span>\n    <h2 _v-1aa860d3=\"\">{{ leftMatched }}</h2>\n</div>\n";
 
 /***/ },
 /* 26 */
@@ -11105,7 +11105,7 @@
 /* 31 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"status-bar\" _v-47f1fbae=\"\">\n   <logo _v-47f1fbae=\"\"></logo>\n   <board _v-47f1fbae=\"\"></board>\n   <score _v-47f1fbae=\"\"></score>\n</div>\n";
+	module.exports = "\n<div class=\"status-bar\" _v-3e97dad4=\"\">\n   <logo _v-3e97dad4=\"\"></logo>\n   <match-info _v-3e97dad4=\"\"></match-info>\n   <score _v-3e97dad4=\"\"></score>\n</div>\n";
 
 /***/ },
 /* 32 */
@@ -11175,7 +11175,7 @@
 
 
 	// module
-	exports.push([module.id, "\n.chessboard[_v-4b331e00]{\n    margin-top: 20px;\n    width: 100%;\n    background-color: #fff;\n    height: 530px;\n    border-radius: 4px;\n    padding: 10px 5px 10px 5px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: row;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-flex-wrap: wrap;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-align-content: space-around;\n        -ms-flex-line-pack: distribute;\n            align-content: space-around;\n}\n\n.container[_v-4b331e00]:nth-child(4n){\n    margin-right: 0px;\n}\n", ""]);
+	exports.push([module.id, "\n.chessboard[_v-4b331e00]{\n    margin-top: 20px;\n    width: 100%;\n    background-color: #fff;\n    height: 530px;\n    border-radius: 4px;\n    padding: 10px 5px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-flex-wrap: wrap;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-align-content: space-around;\n        -ms-flex-line-pack: distribute;\n            align-content: space-around;\n}\n\n.container[_v-4b331e00]:nth-child(4n){\n    margin-right: 0px;\n}\n", ""]);
 
 	// exports
 
@@ -11678,13 +11678,13 @@
 /* 59 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"status-footer\" _v-5b0a3fb5=\"\">\n    <span v-if=\"status === READY\" _v-5b0a3fb5=\"\">Ready</span>\n    <span v-if=\"status === PLAYING\" _v-5b0a3fb5=\"\">Playing</span>\n    <a v-if=\"status === PASS\" v-on:click.prevent.stop=\"reset()\" href=\"\" _v-5b0a3fb5=\"\">Play again</a>\n    <span class=\"elapsed\" _v-5b0a3fb5=\"\">{{ elapsedMs }} s</span>\n</div>\n";
+	module.exports = "\n<div class=\"status-footer\" _v-5b0a3fb5=\"\">\n    <span v-if=\"status === READY\" _v-5b0a3fb5=\"\">Ready</span>\n    <span v-if=\"status === PLAYING\" _v-5b0a3fb5=\"\">Playing</span>\n    <a v-if=\"status === PASS\" v-on:click.prevent.stop=\"reset\" href=\"\" _v-5b0a3fb5=\"\">Play again</a>\n    <span class=\"elapsed\" _v-5b0a3fb5=\"\">{{ elapsedMs }} s</span>\n</div>\n";
 
 /***/ },
 /* 60 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"game-panel\" _v-65574ff2=\"\">\n   <board-panel _v-65574ff2=\"\"></board-panel>\n   <chessboard _v-65574ff2=\"\"></chessboard>\n   <status _v-65574ff2=\"\"></status>\n</div>\n";
+	module.exports = "\n<div class=\"game-panel\" _v-65574ff2=\"\">\n   <!-- 组装上、中、下三个部分组件 -->\n   <dashboard _v-65574ff2=\"\"></dashboard>\n   <chessboard _v-65574ff2=\"\"></chessboard>\n   <status _v-65574ff2=\"\"></status>\n</div>\n";
 
 /***/ },
 /* 61 */
