@@ -1,6 +1,6 @@
 <template>
     <div class="game-panel">
-       <Board-panel></Board-panel>
+       <Dashboard></Dashboard>
        <Chessboard></Chessboard>
        <Status></Status>
     </div>
@@ -8,7 +8,7 @@
 
 <script>
 
-import BoardPanel from './dashboard/BoardPanel';
+import Dashboard from './dashboard/Dashboard';
 import Chessboard from './card/Chessboard';
 import Status from './footer/PlayStatus';
 
@@ -29,7 +29,7 @@ export default {
         this.reset();
     },
 
-    components: {BoardPanel, Chessboard, Status}
+    components: {Dashboard, Chessboard, Status}
 }
 </script>
 
