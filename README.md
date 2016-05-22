@@ -12,6 +12,64 @@ We choose `single-file-component` pattern as the fundamental of this game. In or
 ![](https://raw.githubusercontent.com/leftstick/vue-memory-game/master/docs/img/components.png)
 
 
+## Components break down ##
+
+1. `Game`, the whole game board
+2. `Dashboard`, the panel on the top, including "logo", "progress", "best result"
+3. `Logo`, on the left of `Dashboard`, showing the game Logo
+4. `MatchInfo`, on the center of `Dashboard`, showing the current matching information
+5. `Score`, on the right of `Dashboard`, showing the best result
+6. `Chessboard`, on the center of `Game`, the playing area
+7. `Card`, each card in the `Chessboard`
+8. `PlayStatus`, the footer part, displaying current status of game
+
+## File Structure ##
+
+```
+vue-memory-game
+├── css
+│   └── main.css
+├── img
+│   ├── ...
+│   └── zeppelin.png
+├── js
+│   ├── components
+│   │   ├── card
+│   │   │   ├── Card.vue
+│   │   │   └── Chessboard.vue
+│   │   ├── dashboard
+│   │   │   ├── Dashboard.vue
+│   │   │   ├── Logo.vue
+│   │   │   ├── MatchInfo.vue
+│   │   │   └── Score.vue
+│   │   ├── footer
+│   │   │   └── PlayStatus.vue
+│   │   │
+│   │   └── Game.vue
+│   │
+│   ├── vuex
+│   │   ├── actions
+│   │   │   ├── controlCenter.js
+│   │   │   └── types.js
+│   │   ├── getters
+│   │   │   └── stateHolder.js
+│   │   └── store
+│   │       ├── index.js
+│   │       └── statusEnum.js
+│   │
+│   └── index.js
+│
+├── index.html_vm
+├── package.json
+├── webpack.config.js
+└── webpack.config.prod.js
+```
+
+## Detail Explanation? ##
+
+* [Chinese Edition](https://segmentfault.com/a/1190000005168085)
+
+
 ## Want Having a try locally? ##
 
 ```bash
