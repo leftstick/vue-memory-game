@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/leftstick/vue-memory-game#readme",
   "dependencies": {
-    "vue": "^1.0.21",
+    "vue": "^1.0.24",
     "vuex": "^0.6.3"
   },
   "devDependencies": {
@@ -36,9 +36,9 @@
     "style-loader": "^0.13.1",
     "vue-hot-reload-api": "^1.3.2",
     "vue-html-loader": "^1.2.2",
-    "vue-loader": "^8.3.1",
+    "vue-loader": "^8.4.0",
     "vue-style-loader": "^1.0.0",
-    "webpack": "^1.13.0",
+    "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
 }
