@@ -10341,6 +10341,7 @@
 	}, 0);
 
 	module.exports = Vue;
+
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
@@ -10852,7 +10853,7 @@
 
 
 	// module
-	exports.push([module.id, "\n.logo[_v-1aba4bca]{\n    width: 160px;\n    height: 100px;\n    line-height: 90px;\n    padding: 5px;\n    border-radius: 5px;\n    background-color: #5979ac;\n    color: #fff;\n    text-align: center;\n}\n", ""]);
+	exports.push([module.id, "\n.logo[_v-1aba4bca]{\n    width: 160px;\n    height: 100px;\n    line-height: 90px;\n    padding: 5px;\n    border-radius: 5px;\n    background-color: #5979ac;\n    color: #fff;\n    text-align: center;\n}\na[_v-1aba4bca] {\n    text-decoration: none;\n    color: #fff;\n}\n", ""]);
 
 	// exports
 
@@ -10872,7 +10873,7 @@
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<h1 class=\"logo\" _v-1aba4bca=\"\">Memory</h1>\n";
+	module.exports = "\n<h1 class=\"logo\" _v-1aba4bca=\"\"><a href=\"https://github.com/leftstick/vue-memory-game\" target=\"_blank\" _v-1aba4bca=\"\">Memory</a></h1>\n";
 
 /***/ },
 /* 20 */
