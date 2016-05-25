@@ -1,5 +1,5 @@
 <template>
-    <h1 class="logo">Memory</h1>
+    <h1 class="logo"><a href="https://github.com/leftstick/vue-memory-game" target="_blank">Memory</a></h1>
 </template>
 
 <script>
@@ -18,5 +18,9 @@ export default {
     background-color: #5979ac;
     color: #fff;
     text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #fff;
 }
 </style>
