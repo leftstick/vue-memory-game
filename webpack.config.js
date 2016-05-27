@@ -15,7 +15,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.vue$/,
-                loader: 'babel?{"presets":["es2015"]}!vue',
+                loader: 'vue',
                 exclude: /node_modules/
             },
             {
@@ -32,6 +32,11 @@ module.exports = {
                 loader: 'file'
             }
         ]
+    },
+    vue: {
+        loaders: {
+            js: 'babel?{"presets":["es2015"]}'
+        }
     },
     resolve: {
         root: [
