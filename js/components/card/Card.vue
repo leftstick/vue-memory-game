@@ -90,4 +90,28 @@ export default {
     background: blue;
     transform: rotateY( 180deg );
 }
+
+@media screen and (max-width: 450px) {
+    .container{
+        width: 92px;
+        height: 111px;
+        margin-right: 1px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container{
+        width: 85px;
+        height: 102px;
+        margin-right: 1px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container{
+        width: 70px;
+        height: 84px;
+        margin-right: 1px;
+    }
+}
 </style>

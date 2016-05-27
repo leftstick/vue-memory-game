@@ -78,4 +78,16 @@ export default {
 .container:nth-child(4n){
     margin-right: 0px;
 }
+
+@media screen and (max-width: 450px) {
+    .chessboard{
+        height: 480px;
+        padding: 10px 0px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .chessboard{
+        height: 450px;
+    }
+}
 </style>

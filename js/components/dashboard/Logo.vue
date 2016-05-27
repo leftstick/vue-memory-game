@@ -23,4 +23,25 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
+@media screen and (max-width: 450px) {
+    .logo{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .logo{
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .logo{
+        width: 110px;
+    }
+    a{
+        font-size: 18px;
+    }
+}
 </style>

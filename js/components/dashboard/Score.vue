@@ -31,7 +31,7 @@ export default {
     color: #eae0d1;
 }
 
-.score span{
+span{
     font-size: 19px;
     font-weight: bold;
     display: block;
@@ -41,5 +41,27 @@ export default {
 
 h2{
     color: #fff;
+}
+@media screen and (max-width: 450px) {
+    .score{
+        width: 105px;
+    }
+    span{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .score{
+        width: 95px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .score{
+        width: 90px;
+    }
+    span{
+        font-size: 15px;
+    }
 }
 </style>

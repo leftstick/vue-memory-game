@@ -4,7 +4,8 @@
   "description": "A tiny game written in vue. It's inspired by IgorMinar's Memory-Game",
   "scripts": {
     "start": "webpack-dev-server --content-base build/ --hot --inline",
-    "dist": "rm -rf dist; webpack --config webpack.config.prod.js"
+    "dist": "rm -rf dist; webpack --config webpack.config.prod.js",
+    "deploy": "npm run dist; git checkout gh-pages; rm -rf *.png; rm -rf *.js; rm -rf *.ico; rm -rf index.html; mv dist/* .;"
   },
   "repository": {
     "type": "git",

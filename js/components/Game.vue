@@ -48,4 +48,12 @@ export default {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 450px) {
+    .game-panel{
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+}
 </style>
