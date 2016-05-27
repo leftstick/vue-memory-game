@@ -10454,34 +10454,30 @@
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var __vue_script__, __vue_template__;
-	__webpack_require__(7);
-	__vue_script__ = __webpack_require__(10);
-	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/Game.vue: named exports in *.vue files are ignored.");
-	}
-	__vue_template__ = __webpack_require__(60);
-	module.exports = __vue_script__ || {};
-	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_script__, __vue_template__
+	__webpack_require__(7)
+	__vue_script__ = __webpack_require__(10)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] js/components/Game.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(60)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
-	  (typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports).template = __vue_template__;
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (false) {
-	  (function () {
-	    module.hot.accept();
-	    var hotAPI = require("vue-hot-reload-api");
-	    hotAPI.install(require("vue"), false);
-	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/Game.vue";
-	    if (!module.hot.data) {
-	      hotAPI.createRecord(id, module.exports);
-	    } else {
-	      hotAPI.update(id, module.exports, __vue_template__);
-	    }
-	  })();
-	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/Game.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 7 */
@@ -10775,6 +10771,9 @@
 
 	exports.default = {
 
+	    //vuex是一个特殊的属性，actions放在里面，
+	    //省却了我们手动传入this.$store的麻烦
+
 	    vuex: {
 	        actions: {
 	            reset: _controlCenter.reset,
@@ -10789,39 +10788,67 @@
 
 	    components: { Dashboard: _Dashboard2.default, Chessboard: _Chessboard2.default, Status: _PlayStatus2.default }
 	};
+	// </script>
+	//
+	// <style scoped>
+	// .game-panel{
+	//     width: 450px;
+	//     height: 670px;
+	//     border: 4px solid #BDBDBD;
+	//     border-radius: 2px;
+	//     background-color: #faf8ef;
+	//     padding: 10px;
+	//     display: flex;
+	//     flex-direction: column;
+	// }
+	//
+	// @media screen and (max-width: 450px) {
+	//     .game-panel{
+	//         width: 100%;
+	//         height: 100%;
+	//         justify-content: space-around;
+	//     }
+	// }
+	// </style>
+	// <template>
+	//     <div class="game-panel">
+	//        <!-- 组装上、中、下三个部分组件 -->
+	//        <Dashboard></Dashboard>
+	//        <Chessboard></Chessboard>
+	//        <Status></Status>
+	//     </div>
+	// </template>
+	//
+	// <script>
 
 /***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var __vue_script__, __vue_template__;
-	__webpack_require__(12);
-	__vue_script__ = __webpack_require__(14);
-	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/dashboard/Dashboard.vue: named exports in *.vue files are ignored.");
-	}
-	__vue_template__ = __webpack_require__(31);
-	module.exports = __vue_script__ || {};
-	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_script__, __vue_template__
+	__webpack_require__(12)
+	__vue_script__ = __webpack_require__(14)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] js/components/dashboard/Dashboard.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(31)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
-	  (typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports).template = __vue_template__;
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (false) {
-	  (function () {
-	    module.hot.accept();
-	    var hotAPI = require("vue-hot-reload-api");
-	    hotAPI.install(require("vue"), false);
-	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/Dashboard.vue";
-	    if (!module.hot.data) {
-	      hotAPI.createRecord(id, module.exports);
-	    } else {
-	      hotAPI.update(id, module.exports, __vue_template__);
-	    }
-	  })();
-	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/Dashboard.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 12 */
@@ -10890,39 +10917,55 @@
 	exports.default = {
 	    components: { Logo: _Logo2.default, MatchInfo: _MatchInfo2.default, Score: _Score2.default }
 	};
+	// </script>
+	//
+	// <style scoped>
+	// .status-bar{
+	//     width: 100%;
+	//     height: 100px;
+	//     display: flex;
+	//     justify-content: space-between;
+	//     align-items: center;
+	// }
+	// </style>
+	// <template>
+	//     <div class="status-bar">
+	//        <Logo></Logo>
+	//        <Match-info></Match-info>
+	//        <Score></Score>
+	//     </div>
+	// </template>
+	//
+	// <script>
 
 /***/ },
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var __vue_script__, __vue_template__;
-	__webpack_require__(16);
-	__vue_script__ = __webpack_require__(18);
-	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/dashboard/Logo.vue: named exports in *.vue files are ignored.");
-	}
-	__vue_template__ = __webpack_require__(19);
-	module.exports = __vue_script__ || {};
-	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_script__, __vue_template__
+	__webpack_require__(16)
+	__vue_script__ = __webpack_require__(18)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] js/components/dashboard/Logo.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(19)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
-	  (typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports).template = __vue_template__;
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (false) {
-	  (function () {
-	    module.hot.accept();
-	    var hotAPI = require("vue-hot-reload-api");
-	    hotAPI.install(require("vue"), false);
-	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/Logo.vue";
-	    if (!module.hot.data) {
-	      hotAPI.createRecord(id, module.exports);
-	    } else {
-	      hotAPI.update(id, module.exports, __vue_template__);
-	    }
-	  })();
-	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/Logo.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 16 */
@@ -10973,7 +11016,51 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	// <template>
+	//     <h1 class="logo"><a href="https://github.com/leftstick/vue-memory-game" target="_blank">Memory</a></h1>
+	// </template>
+	//
+	// <script>
 	exports.default = {};
+	// </script>
+	//
+	// <style scoped>
+	// .logo{
+	//     width: 160px;
+	//     height: 100px;
+	//     line-height: 90px;
+	//     padding: 5px;
+	//     border-radius: 5px;
+	//     background-color: #5979ac;
+	//     color: #fff;
+	//     text-align: center;
+	// }
+	// a {
+	//     text-decoration: none;
+	//     color: #fff;
+	// }
+	//
+	// @media screen and (max-width: 450px) {
+	//     .logo{
+	//         width: 150px;
+	//     }
+	// }
+	//
+	// @media screen and (max-width: 380px) {
+	//     .logo{
+	//         width: 140px;
+	//     }
+	// }
+	//
+	// @media screen and (max-width: 360px) {
+	//     .logo{
+	//         width: 110px;
+	//     }
+	//     a{
+	//         font-size: 18px;
+	//     }
+	// }
+	// </style>
 
 /***/ },
 /* 19 */
@@ -10985,34 +11072,30 @@
 /* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var __vue_script__, __vue_template__;
-	__webpack_require__(21);
-	__vue_script__ = __webpack_require__(23);
-	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/dashboard/MatchInfo.vue: named exports in *.vue files are ignored.");
-	}
-	__vue_template__ = __webpack_require__(25);
-	module.exports = __vue_script__ || {};
-	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_script__, __vue_template__
+	__webpack_require__(21)
+	__vue_script__ = __webpack_require__(23)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] js/components/dashboard/MatchInfo.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(25)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
-	  (typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports).template = __vue_template__;
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (false) {
-	  (function () {
-	    module.hot.accept();
-	    var hotAPI = require("vue-hot-reload-api");
-	    hotAPI.install(require("vue"), false);
-	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/MatchInfo.vue";
-	    if (!module.hot.data) {
-	      hotAPI.createRecord(id, module.exports);
-	    } else {
-	      hotAPI.update(id, module.exports, __vue_template__);
-	    }
-	  })();
-	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/MatchInfo.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 21 */
@@ -11073,6 +11156,65 @@
 	        }
 	    }
 	};
+	// </script>
+	//
+	// <style scoped>
+	// .board{
+	//     width: 120px;
+	//     height: 100px;
+	//     padding: 10px;
+	//     background-color: #bbada0;
+	//     border-radius: 5px;
+	//     display: flex;
+	//     flex-direction: column;
+	//     justify-content: space-between;
+	//     align-items: center;
+	//     color: #eae0d1;
+	// }
+	//
+	// span{
+	//     font-size: 19px;
+	//     font-weight: bold;
+	//     display: block;
+	//     width: 100%;
+	//     text-align: center;
+	// }
+	//
+	// h2{
+	//     color: #fff;
+	// }
+	// @media screen and (max-width: 450px) {
+	//     .board{
+	//         width: 105px;
+	//     }
+	//     span{
+	//         font-size: 17px;
+	//     }
+	// }
+	//
+	// @media screen and (max-width: 380px) {
+	//     .board{
+	//         width: 95px;
+	//     }
+	// }
+	//
+	// @media screen and (max-width: 360px) {
+	//     .board{
+	//         width: 90px;
+	//     }
+	//     span{
+	//         font-size: 15px;
+	//     }
+	// }
+	// </style>
+	// <template>
+	//     <div class="board">
+	//         <span>Pairs Left To Match</span>
+	//         <h2>{{ leftMatched }}</h2>
+	//     </div>
+	// </template>
+	//
+	// <script>
 
 /***/ },
 /* 24 */
@@ -11113,34 +11255,30 @@
 /* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var __vue_script__, __vue_template__;
-	__webpack_require__(27);
-	__vue_script__ = __webpack_require__(29);
-	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/dashboard/Score.vue: named exports in *.vue files are ignored.");
-	}
-	__vue_template__ = __webpack_require__(30);
-	module.exports = __vue_script__ || {};
-	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_script__, __vue_template__
+	__webpack_require__(27)
+	__vue_script__ = __webpack_require__(29)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] js/components/dashboard/Score.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(30)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
-	  (typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports).template = __vue_template__;
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (false) {
-	  (function () {
-	    module.hot.accept();
-	    var hotAPI = require("vue-hot-reload-api");
-	    hotAPI.install(require("vue"), false);
-	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/Score.vue";
-	    if (!module.hot.data) {
-	      hotAPI.createRecord(id, module.exports);
-	    } else {
-	      hotAPI.update(id, module.exports, __vue_template__);
-	    }
-	  })();
-	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/dashboard/Score.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 27 */
@@ -11201,6 +11339,64 @@
 	        }
 	    }
 	};
+	// </script>
+	//
+	// <style scoped>
+	// .score{
+	//     width: 120px;
+	//     height: 100px;
+	//     padding: 10px;
+	//     background-color: #bbada0;
+	//     border-radius: 5px;
+	//     display: flex;
+	//     flex-direction: column;
+	//     justify-content: space-between;
+	//     align-items: center;
+	//     color: #eae0d1;
+	// }
+	//
+	// span{
+	//     font-size: 19px;
+	//     font-weight: bold;
+	//     display: block;
+	//     width: 100%;
+	//     text-align: center;
+	// }
+	//
+	// h2{
+	//     color: #fff;
+	// }
+	// @media screen and (max-width: 450px) {
+	//     .score{
+	//         width: 105px;
+	//     }
+	//     span{
+	//         font-size: 17px;
+	//     }
+	// }
+	// @media screen and (max-width: 380px) {
+	//     .score{
+	//         width: 95px;
+	//     }
+	// }
+	//
+	// @media screen and (max-width: 360px) {
+	//     .score{
+	//         width: 90px;
+	//     }
+	//     span{
+	//         font-size: 15px;
+	//     }
+	// }
+	// </style>
+	// <template>
+	//     <div class="score">
+	//         <span>Highest Speed</span>
+	//         <h2>{{ highestSpeed }}</h2>
+	//     </div>
+	// </template>
+	//
+	// <script>
 
 /***/ },
 /* 30 */
@@ -11218,34 +11414,30 @@
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var __vue_script__, __vue_template__;
-	__webpack_require__(33);
-	__vue_script__ = __webpack_require__(35);
-	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/card/Chessboard.vue: named exports in *.vue files are ignored.");
-	}
-	__vue_template__ = __webpack_require__(54);
-	module.exports = __vue_script__ || {};
-	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_script__, __vue_template__
+	__webpack_require__(33)
+	__vue_script__ = __webpack_require__(35)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] js/components/card/Chessboard.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(54)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
-	  (typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports).template = __vue_template__;
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (false) {
-	  (function () {
-	    module.hot.accept();
-	    var hotAPI = require("vue-hot-reload-api");
-	    hotAPI.install(require("vue"), false);
-	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/card/Chessboard.vue";
-	    if (!module.hot.data) {
-	      hotAPI.createRecord(id, module.exports);
-	    } else {
-	      hotAPI.update(id, module.exports, __vue_template__);
-	    }
-	  })();
-	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/card/Chessboard.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 33 */
@@ -11309,6 +11501,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// <template>
+	//     <div class="chessboard">
+	//         <Card v-for="cart in cards" :option="cart" v-on:flipped="onFlipped"></Card>
+	//     </div>
+	// </template>
+	//
+	// <script>
 	exports.default = {
 
 	    data: function data() {
@@ -11357,39 +11556,68 @@
 
 	    components: { Card: _Card2.default }
 	};
+	// </script>
+	//
+	// <style scoped>
+	// .chessboard{
+	//     margin-top: 20px;
+	//     width: 100%;
+	//     background-color: #fff;
+	//     height: 530px;
+	//     border-radius: 4px;
+	//     padding: 10px 5px;
+	//     display: flex;
+	//     flex-wrap: wrap;
+	//     justify-content: center;
+	//     align-items: center;
+	//     align-content: space-around;
+	// }
+	//
+	// .container:nth-child(4n){
+	//     margin-right: 0px;
+	// }
+	//
+	// @media screen and (max-width: 450px) {
+	//     .chessboard{
+	//         height: 480px;
+	//         padding: 10px 0px;
+	//     }
+	// }
+	// @media screen and (max-width: 370px) {
+	//     .chessboard{
+	//         height: 450px;
+	//     }
+	// }
+	// </style>
 
 /***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var __vue_script__, __vue_template__;
-	__webpack_require__(37);
-	__vue_script__ = __webpack_require__(39);
-	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/card/Card.vue: named exports in *.vue files are ignored.");
-	}
-	__vue_template__ = __webpack_require__(44);
-	module.exports = __vue_script__ || {};
-	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_script__, __vue_template__
+	__webpack_require__(37)
+	__vue_script__ = __webpack_require__(39)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] js/components/card/Card.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(44)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
-	  (typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports).template = __vue_template__;
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (false) {
-	  (function () {
-	    module.hot.accept();
-	    var hotAPI = require("vue-hot-reload-api");
-	    hotAPI.install(require("vue"), false);
-	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/card/Card.vue";
-	    if (!module.hot.data) {
-	      hotAPI.createRecord(id, module.exports);
-	    } else {
-	      hotAPI.update(id, module.exports, __vue_template__);
-	    }
-	  })();
-	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/card/Card.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 37 */
@@ -11475,6 +11703,89 @@
 
 	    components: {}
 	};
+	// </script>
+	//
+	// <style scoped>
+	// .container{
+	//     width: 100px;
+	//     height: 121px;
+	//     margin-right: 3px;
+	//     cursor: pointer;
+	//     position: relative;
+	//     perspective: 800px;
+	// }
+	//
+	// .card {
+	//     width: 100%;
+	//     height: 100%;
+	//     transition: transform 1s;
+	//     transform-style: preserve-3d;
+	// }
+	//
+	// .card.flipped {
+	//     transform: rotateY( 180deg );
+	// }
+	//
+	// .card img {
+	//     display: block;
+	//     height: 100%;
+	//     width: 100%;
+	//     position: absolute;
+	//     backface-visibility: hidden;
+	// }
+	//
+	// .card .back {
+	//     background: blue;
+	//     transform: rotateY( 0deg );
+	// }
+	//
+	// .card .front {
+	//     background: blue;
+	//     transform: rotateY( 180deg );
+	// }
+	//
+	// @media screen and (max-width: 450px) {
+	//     .container{
+	//         width: 92px;
+	//         height: 111px;
+	//         margin-right: 1px;
+	//     }
+	// }
+	//
+	// @media screen and (max-width: 380px) {
+	//     .container{
+	//         width: 85px;
+	//         height: 102px;
+	//         margin-right: 1px;
+	//     }
+	// }
+	//
+	// @media screen and (max-width: 360px) {
+	//     .container{
+	//         width: 70px;
+	//         height: 84px;
+	//         margin-right: 1px;
+	//     }
+	// }
+	// </style>
+	// <template>
+	//     <div class="container" v-on:click="flip">
+	//         <div class="card" v-bind:class="{ flipped: option.flipped }">
+	//             <img class="front" v-if="option.cardName === '8-ball'" src="../../../img/8-ball.png"/>
+	//             <img class="front" v-if="option.cardName === 'baked-potato'" src="../../../img/baked-potato.png"/>
+	//             <img class="front" v-if="option.cardName === 'dinosaur'" src="../../../img/dinosaur.png"/>
+	//             <img class="front" v-if="option.cardName === 'kronos'" src="../../../img/kronos.png"/>
+	//             <img class="front" v-if="option.cardName === 'rocket'" src="../../../img/rocket.png"/>
+	//             <img class="front" v-if="option.cardName === 'skinny-unicorn'" src="../../../img/skinny-unicorn.png"/>
+	//             <img class="front" v-if="option.cardName === 'that-guy'" src="../../../img/that-guy.png"/>
+	//             <img class="front" v-if="option.cardName === 'zeppelin'" src="../../../img/zeppelin.png"/>
+	//
+	//             <img class="back" src="../../../img/back.png"/>
+	//         </div>
+	//     </div>
+	// </template>
+	//
+	// <script>
 
 /***/ },
 /* 40 */
@@ -11678,34 +11989,30 @@
 /* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var __vue_script__, __vue_template__;
-	__webpack_require__(56);
-	__vue_script__ = __webpack_require__(58);
-	if (__vue_script__ && __vue_script__.__esModule && Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] js/components/footer/PlayStatus.vue: named exports in *.vue files are ignored.");
-	}
-	__vue_template__ = __webpack_require__(59);
-	module.exports = __vue_script__ || {};
-	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_script__, __vue_template__
+	__webpack_require__(56)
+	__vue_script__ = __webpack_require__(58)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] js/components/footer/PlayStatus.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(59)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
-	  (typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports).template = __vue_template__;
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (false) {
-	  (function () {
-	    module.hot.accept();
-	    var hotAPI = require("vue-hot-reload-api");
-	    hotAPI.install(require("vue"), false);
-	    if (!hotAPI.compatible) return;
-	    var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/footer/PlayStatus.vue";
-	    if (!module.hot.data) {
-	      hotAPI.createRecord(id, module.exports);
-	    } else {
-	      hotAPI.update(id, module.exports, __vue_template__);
-	    }
-	  })();
-	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/haozuo/codes/github/vue-memory-game/js/components/footer/PlayStatus.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 /* 56 */
@@ -11780,6 +12087,39 @@
 	    }
 
 	};
+	// </script>
+	//
+	// <style scoped>
+	// .status-footer{
+	//     position: relative;
+	//     margin-top: 10px;
+	//     width: 100%;
+	//     height: 20px;
+	//     line-height: 20px;
+	//     text-align: center;
+	//     font-size: 18px;
+	//     font-weight: bold;
+	// }
+	// a{
+	//     text-decoration: none;
+	// }
+	// .elapsed{
+	//     position: absolute;
+	//     right: 10px;
+	//     font-size: 15px;
+	//     font-weight: normal;
+	// }
+	// </style>
+	// <template>
+	//     <div class="status-footer">
+	//         <span v-if="status === READY">Ready</span>
+	//         <span v-if="status === PLAYING">Playing</span>
+	//         <a v-if="status === PASS" v-on:click.prevent.stop="reset" href>Play again</a>
+	//         <span class="elapsed">{{ elapsedMs }} s</span>
+	//     </div>
+	// </template>
+	//
+	// <script>
 
 /***/ },
 /* 59 */
