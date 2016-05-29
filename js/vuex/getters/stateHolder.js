@@ -9,3 +9,5 @@ export const elapsedMs = state => state.elapsedMs;
 export const cards = state => state.cards;
 
 export const status = state => state.status;
+
+export const displayRank = state => state.displayRank;

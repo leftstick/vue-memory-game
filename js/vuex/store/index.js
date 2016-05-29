@@ -11,7 +11,9 @@ const state = {
     highestSpeed: 0,
     status: '',
     cards: [],
-    elapsedMs: 0
+    elapsedMs: 0,
+    displayRank: false,
+    ranks: []
 };
 
 const mutations = {
@@ -21,6 +23,8 @@ const mutations = {
         st.status = newState.status;
         st.cards = newState.cards;
         st.elapsedMs = newState.elapsedMs;
+        st.displayRank = newState.displayRank;
+        st.ranks = newState.ranks;
     },
 
     [TYPES.UPDATE_STATUS](st, newStatus) {
@@ -55,6 +59,10 @@ const mutations = {
         if (localStorage.getItem('highestSpeed') > st.elapsedMs) {
             return localStorage.setItem('highestSpeed', st.elapsedMs);
         }
+    },
+
+    [TYPES.DISPLAY_RANK](st) {
+        st.displayRank = true;
     }
 };
 

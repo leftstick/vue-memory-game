@@ -24,7 +24,8 @@
   "homepage": "https://github.com/leftstick/vue-memory-game#readme",
   "dependencies": {
     "vue": "^1.0.24",
-    "vuex": "^0.6.3"
+    "vuex": "^0.6.3",
+    "wilddog": "^0.6.4"
   },
   "devDependencies": {
     "babel-core": "^6.9.0",

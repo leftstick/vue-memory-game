@@ -4,6 +4,8 @@ import {STATUS} from 'vuex/store/statusEnum';
 
 import {TYPES} from './types';
 
+import wilddog from 'wilddog/lib/wilddog-node';
+
 const cardNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
     'that-guy', 'zeppelin'];
 
@@ -14,7 +16,9 @@ export const reset = function({dispatch, state}) {
         status: STATUS.READY,
         cards: shuffle(cardNames.concat(cardNames))
             .map(name => ({flipped: false, cardName: name})),
-        elapsedMs: 0
+        elapsedMs: 0,
+        displayRank: false,
+        ranks: []
     });
 };
 
@@ -30,6 +34,7 @@ let statusHandler = {
     PASS: function(dispatch) {
         clearInterval(timerId);
         dispatch(TYPES.UPDATE_HIGHESTSPEED);
+        dispatch(TYPES.DISPLAY_RANK);
     }
 };
 
@@ -48,4 +53,23 @@ export const flipCards = function({dispatch, state}, cards) {
 
 export const match = function({dispatch, state}) {
     dispatch(TYPES.DECREASE_MATCH);
+};
+
+var ref = new Wilddog('https://memorygame.wilddogio.com/');
+
+export const updateRank = function({dispatch, state}, info) {
+    var usersRef = ref.child('users');
+    usersRef.set({
+        [encodeURIComponent(info.userName)]: {
+            username: info.userName,
+            speed: info.speed
+        }
+    });
+
+    usersRef.on('value', function(data) {
+        console.log('data', data);
+    }, function(err) {
+        console.log('error', err);
+    });
+
 };
