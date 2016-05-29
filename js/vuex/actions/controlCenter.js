@@ -51,7 +51,7 @@ export const setupServerChannel = function({dispatch, state}) {
     ref = new Wilddog('https://memorygame.wilddogio.com/users');
     ref
         .orderByChild('speed')
-        .limitToLast(10)
+        .limitToFirst(10)
         .on('value', function(data) {
 
             let ranks = [];
