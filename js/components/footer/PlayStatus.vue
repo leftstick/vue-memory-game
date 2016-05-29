@@ -1,34 +1,20 @@
 <template>
     <div class="status-footer">
-        <span v-if="status === READY">Ready</span>
-        <span v-if="status === PLAYING">Playing</span>
-        <a v-if="status === PASS" v-on:click.prevent.stop="reset" href>Play again</a>
+        <span>{{ userName }}</span>
         <span class="elapsed">{{ elapsedMs }} s</span>
     </div>
 </template>
 
 <script>
-import { reset } from 'vuex/actions/controlCenter';
-import { status, elapsedMs } from 'vuex/getters/stateHolder';
-
-import { STATUS } from 'vuex/store/statusEnum';
+import { userName, elapsedMs } from 'vuex/getters/stateHolder';
 
 export default {
-
-    data: function() {
-        return STATUS;
-    },
-
     vuex: {
-        actions: {
-            reset
-        },
         getters: {
-            status,
+            userName,
             elapsedMs
         }
     }
-
 }
 </script>
 
@@ -42,9 +28,6 @@ export default {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-}
-a{
-    text-decoration: none;
 }
 .elapsed{
     position: absolute;

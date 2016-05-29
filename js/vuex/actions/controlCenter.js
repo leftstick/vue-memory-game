@@ -45,6 +45,33 @@ export const updateStatus = function({dispatch, state}, status) {
     statusHandler[status] && statusHandler[status](dispatch);
 };
 
+let ref;
+
+export const setupServerChannel = function({dispatch, state}) {
+    ref = new Wilddog('https://memorygame.wilddogio.com/users');
+    ref
+        .orderByChild('speed')
+        .limitToLast(10)
+        .on('value', function(data) {
+
+            let ranks = [];
+            let obj = data.val();
+            if (!obj) {
+                return;
+            }
+            let keys = Object.keys(obj);
+
+            for (let i = 0; i < keys.length; i++) {
+                ranks.push(obj[keys[i]]);
+            }
+            ranks.sort((a, b) => a.speed - b.speed);
+            console.log('ranks', ranks);
+            dispatch(TYPES.UPDATE_RANKS, ranks);
+        }, function(err) {
+            console.log('error', err);
+        });
+};
+
 export const updateUserName = function({dispatch, state}, name) {
     dispatch(TYPES.UPDATE_USERNAME, name);
 };
@@ -66,21 +93,8 @@ export const toggleRank = function({dispatch, state}) {
     dispatch(TYPES.TOGGLE_NAMEINPUT);
 };
 
-var ref = new Wilddog('https://memorygame.wilddogio.com/');
-
-export const updateRank = function({dispatch, state}, info) {
-    var usersRef = ref.child('users');
-    usersRef.set({
-        [encodeURIComponent(info.userName)]: {
-            username: info.userName,
-            speed: info.speed
-        }
-    });
-
-    usersRef.on('value', function(data) {
-        console.log('data', data);
-    }, function(err) {
-        console.log('error', err);
-    });
-
+export const updateRank = function({dispatch, state}) {
+    ref
+        .child(state.userName)
+        .set({username: state.userName, speed: state.elapsedMs});
 };

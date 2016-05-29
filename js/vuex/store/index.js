@@ -76,6 +76,10 @@ const mutations = {
     [TYPES.UPDATE_USERNAME](st, name) {
         localStorage.setItem('userName', name);
         st.userName = name;
+    },
+
+    [TYPES.UPDATE_RANKS](st, ranks) {
+        st.ranks = ranks;
     }
 };
 

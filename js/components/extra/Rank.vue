@@ -13,55 +13,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
-                    </tr>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
-                    </tr>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
-                    </tr>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
-                    </tr>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
-                    </tr>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
-                    </tr>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
-                    </tr>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
-                    </tr>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
-                    </tr>
-                    <tr>
-                        <td width="10%" align="center">1</td>
-                        <td width="70%" align="center">右领军大都督</td>
-                        <td width="20%" align="center">90</td>
+                    <tr v-for="rank of ranks">
+                        <td width="10%" align="center">{{ $index + 1 }}</td>
+                        <td width="70%" align="center">{{ rank.username }}</td>
+                        <td width="20%" align="center">{{ rank.speed }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -76,14 +31,16 @@
 <script>
 import { reset } from 'js/vuex/actions/controlCenter';
 
-export default {
+import { ranks } from 'js/vuex/getters/stateHolder';
 
-    props: {
-    },
+export default {
 
     vuex: {
         actions: {
             reset
+        },
+        getters: {
+            ranks
         }
     },
 

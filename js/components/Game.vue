@@ -16,7 +16,7 @@ import Chessboard from './card/Chessboard';
 import Status from './footer/PlayStatus';
 import Rank from './extra/Rank';
 
-import { reset, updateStatus } from 'vuex/actions/controlCenter';
+import { reset, updateStatus, setupServerChannel } from 'vuex/actions/controlCenter';
 import { displayRank } from 'vuex/getters/stateHolder';
 import { STATUS } from 'vuex/store/statusEnum';
 
@@ -28,7 +28,8 @@ export default {
     vuex: {
         actions: {
             reset,
-            updateStatus
+            updateStatus,
+            setupServerChannel
         },
         getters: {
             displayRank
@@ -37,6 +38,7 @@ export default {
 
     created: function() {
         this.updateStatus(STATUS.READY);
+        this.setupServerChannel();
         this.reset();
     },
 

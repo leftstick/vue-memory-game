@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { toggleRank, updateUserName } from 'vuex/actions/controlCenter';
+import { toggleRank, updateUserName, updateRank } from 'vuex/actions/controlCenter';
 import { userName } from 'vuex/getters/stateHolder';
 
 export default {
@@ -20,7 +20,8 @@ export default {
     vuex: {
         actions: {
             toggleRank,
-            updateUserName
+            updateUserName,
+            updateRank
         },
         getters: {
             userName
@@ -32,6 +33,7 @@ export default {
                 return;
             }
             this.updateUserName(this.name);
+            this.updateRank();
             this.toggleRank();
         }
     }
