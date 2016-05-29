@@ -11,3 +11,7 @@ export const cards = state => state.cards;
 export const status = state => state.status;
 
 export const displayRank = state => state.displayRank;
+
+export const displayNameInput = state => state.displayNameInput;
+
+export const userName = state => state.userName;

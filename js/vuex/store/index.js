@@ -13,7 +13,9 @@ const state = {
     cards: [],
     elapsedMs: 0,
     displayRank: false,
-    ranks: []
+    displayNameInput: false,
+    ranks: [],
+    userName: ''
 };
 
 const mutations = {
@@ -24,7 +26,9 @@ const mutations = {
         st.cards = newState.cards;
         st.elapsedMs = newState.elapsedMs;
         st.displayRank = newState.displayRank;
+        st.displayNameInput = newState.displayNameInput;
         st.ranks = newState.ranks;
+        st.userName = newState.userName;
     },
 
     [TYPES.UPDATE_STATUS](st, newStatus) {
@@ -61,8 +65,17 @@ const mutations = {
         }
     },
 
-    [TYPES.DISPLAY_RANK](st) {
-        st.displayRank = true;
+    [TYPES.TOGGLE_RANK](st) {
+        st.displayRank = !st.displayRank;
+    },
+
+    [TYPES.TOGGLE_NAMEINPUT](st) {
+        st.displayNameInput = !st.displayNameInput;
+    },
+
+    [TYPES.UPDATE_USERNAME](st, name) {
+        localStorage.setItem('userName', name);
+        st.userName = name;
     }
 };
 

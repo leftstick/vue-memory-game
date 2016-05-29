@@ -1,14 +1,16 @@
 <template>
     <div class="chessboard">
         <Card v-for="cart in cards" :option="cart" v-on:flipped="onFlipped"></Card>
+        <Name-input v-if="displayNameInput"></Name-input>
     </div>
 </template>
 
 <script>
 import Card from './Card';
+import NameInput from './NameInput';
 
 import { updateStatus, match, flipCards } from 'js/vuex/actions/controlCenter';
-import { leftMatched, cards, status } from 'js/vuex/getters/stateHolder';
+import { leftMatched, cards, status, displayNameInput } from 'js/vuex/getters/stateHolder';
 
 import { STATUS } from 'js/vuex/store/statusEnum';
 
@@ -29,7 +31,8 @@ export default {
         getters: {
             leftMatched,
             cards,
-            status
+            status,
+            displayNameInput
         }
     },
 
@@ -56,7 +59,7 @@ export default {
 
     },
 
-    components: {Card}
+    components: {Card, NameInput}
 }
 </script>
 
