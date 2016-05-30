@@ -8,7 +8,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="rank of list">
+            <tr v-for="rank of list" v-bind:style="{ backgroundColor: rank.username === userName ? 'yellow' : 'transparent' }">
                 <td width="10%" align="center">{{ $index + 1 }}</td>
                 <td width="70%" align="center">{{ rank.username }}</td>
                 <td width="20%" align="center">{{ rank.speed }}</td>
@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { userName } from 'vuex/getters/stateHolder';
+
 export default {
     props: {
         list: {
@@ -25,6 +27,12 @@ export default {
             default: function() {
                 return [];
             }
+        }
+    },
+
+    vuex: {
+        getters: {
+            userName
         }
     }
 }
