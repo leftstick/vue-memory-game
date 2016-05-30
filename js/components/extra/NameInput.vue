@@ -2,13 +2,13 @@
     <div class="container">
         <div class="naming">
             <h3>Your Name</h3>
-            <input type="text" v-model="name" value={{userName}} v-on:keyup.enter="modifyName">
+            <input type="text" v-model="name" value={{userName}} v-on:keyup.enter="modifyName" autofocus="true">
         </div>
     </div>
 </template>
 
 <script>
-import { toggleRank, updateUserName, updateRank } from 'vuex/actions/controlCenter';
+import { toggleRank, toggleNameInput, updateUserName, updateRank } from 'vuex/actions/controlCenter';
 import { userName } from 'vuex/getters/stateHolder';
 
 export default {
@@ -20,6 +20,7 @@ export default {
     vuex: {
         actions: {
             toggleRank,
+            toggleNameInput,
             updateUserName,
             updateRank
         },
@@ -34,7 +35,8 @@ export default {
             }
             this.updateUserName(this.name);
             this.updateRank();
-            this.toggleRank();
+            this.toggleRank(true);
+            this.toggleNameInput(false);
         }
     }
 }

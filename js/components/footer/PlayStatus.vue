@@ -1,18 +1,24 @@
 <template>
     <div class="status-footer">
-        <span>{{ userName }}</span>
+        <span v-if="status === READY">{{ userName }}</span>
+        <span v-if="status === PLAYING">Playing</span>
         <span class="elapsed">{{ elapsedMs }} s</span>
     </div>
 </template>
 
 <script>
-import { userName, elapsedMs } from 'vuex/getters/stateHolder';
+import { status, elapsedMs, userName } from 'vuex/getters/stateHolder';
+import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
+
+    data: () => STATUS,
+
     vuex: {
         getters: {
             userName,
-            elapsedMs
+            elapsedMs,
+            status
         }
     }
 }

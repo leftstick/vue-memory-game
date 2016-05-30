@@ -65,12 +65,12 @@ const mutations = {
         }
     },
 
-    [TYPES.TOGGLE_RANK](st) {
-        st.displayRank = !st.displayRank;
+    [TYPES.TOGGLE_RANK](st, boo) {
+        st.displayRank = boo;
     },
 
-    [TYPES.TOGGLE_NAMEINPUT](st) {
-        st.displayNameInput = !st.displayNameInput;
+    [TYPES.TOGGLE_NAMEINPUT](st, boo) {
+        st.displayNameInput = boo;
     },
 
     [TYPES.UPDATE_USERNAME](st, name) {

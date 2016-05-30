@@ -6,6 +6,7 @@
        <Status></Status>
 
        <Rank v-if="displayRank"></Rank>
+       <Name-input v-if="displayNameInput"></Name-input>
     </div>
 </template>
 
@@ -15,9 +16,10 @@ import Dashboard from './dashboard/Dashboard';
 import Chessboard from './card/Chessboard';
 import Status from './footer/PlayStatus';
 import Rank from './extra/Rank';
+import NameInput from './extra/NameInput';
 
 import { reset, updateStatus, setupServerChannel } from 'vuex/actions/controlCenter';
-import { displayRank } from 'vuex/getters/stateHolder';
+import { displayRank, displayNameInput } from 'vuex/getters/stateHolder';
 import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
@@ -32,7 +34,8 @@ export default {
             setupServerChannel
         },
         getters: {
-            displayRank
+            displayRank,
+            displayNameInput
         }
     },
 
@@ -42,7 +45,7 @@ export default {
         this.reset();
     },
 
-    components: {Dashboard, Chessboard, Status, Rank}
+    components: {Dashboard, Chessboard, Status, Rank, NameInput}
 }
 </script>
 

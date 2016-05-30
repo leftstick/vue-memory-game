@@ -36,7 +36,7 @@ let statusHandler = {
     PASS: function(dispatch) {
         clearInterval(timerId);
         dispatch(TYPES.UPDATE_HIGHESTSPEED);
-        dispatch(TYPES.TOGGLE_NAMEINPUT);
+        dispatch(TYPES.TOGGLE_NAMEINPUT, true);
     }
 };
 
@@ -65,7 +65,6 @@ export const setupServerChannel = function({dispatch, state}) {
                 ranks.push(obj[keys[i]]);
             }
             ranks.sort((a, b) => a.speed - b.speed);
-            console.log('ranks', ranks);
             dispatch(TYPES.UPDATE_RANKS, ranks);
         }, function(err) {
             console.log('error', err);
@@ -88,9 +87,12 @@ export const match = function({dispatch, state}) {
     dispatch(TYPES.DECREASE_MATCH);
 };
 
-export const toggleRank = function({dispatch, state}) {
-    dispatch(TYPES.TOGGLE_RANK);
-    dispatch(TYPES.TOGGLE_NAMEINPUT);
+export const toggleRank = function({dispatch, state}, boo) {
+    dispatch(TYPES.TOGGLE_RANK, boo);
+};
+
+export const toggleNameInput = function({dispatch, state}, boo) {
+    dispatch(TYPES.TOGGLE_NAMEINPUT, boo);
 };
 
 export const updateRank = function({dispatch, state}) {

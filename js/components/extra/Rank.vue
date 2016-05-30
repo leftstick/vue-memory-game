@@ -1,25 +1,10 @@
 <template>
     <div class="rank">
         <div class="header">
-            <h1>Hey Ranky</h1>
+            <h1>Hey Ranky！！</h1>
         </div>
         <div class="content">
-            <table align="center">
-                <thead>
-                    <tr>
-                        <th width="10%">No.</th>
-                        <th width="70%">Alias</th>
-                        <th width="20%">Speed</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="rank of ranks">
-                        <td width="10%" align="center">{{ $index + 1 }}</td>
-                        <td width="70%" align="center">{{ rank.username }}</td>
-                        <td width="20%" align="center">{{ rank.speed }}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <Rank-list :list="ranks"></Rank-list>
         </div>
 
         <div class="footer">
@@ -33,6 +18,8 @@ import { reset } from 'js/vuex/actions/controlCenter';
 
 import { ranks } from 'js/vuex/getters/stateHolder';
 
+import RankList from './RankList';
+
 export default {
 
     vuex: {
@@ -44,7 +31,7 @@ export default {
         }
     },
 
-    components: {}
+    components: {RankList}
 }
 </script>
 
@@ -78,20 +65,6 @@ export default {
     border: 4px solid #BDBDBD;
     border-radius: 2px;
     height: 370px;
-}
-
-table{
-    width: 100%;
-}
-
-thead{
-    background-color: #bd2d30;
-    font-size: 18px;
-    color: #fff;
-}
-
-tr{
-    height: 30px;
 }
 
 .footer{
