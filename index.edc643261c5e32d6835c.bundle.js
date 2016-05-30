@@ -24169,40 +24169,23 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntable[_v-b8b13b44]{\n    width: 100%;\n}\n\nthead[_v-b8b13b44]{\n    background-color: #bd2d30;\n    font-size: 18px;\n    color: #fff;\n}\n\ntbody tr[_v-b8b13b44]{\n    height: 30px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntable[_v-b8b13b44]{\n    width: 100%;\n}\n\nthead[_v-b8b13b44]{\n    background-color: #bd2d30;\n    font-size: 18px;\n    color: #fff;\n}\n\ntbody tr[_v-b8b13b44]{\n    height: 30px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 133 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	// <template>
-	//     <table align="center">
-	//         <thead>
-	//             <tr>
-	//                 <th width="10%">No.</th>
-	//                 <th width="70%">Alias</th>
-	//                 <th width="20%">Speed</th>
-	//             </tr>
-	//         </thead>
-	//         <tbody>
-	//             <tr v-for="rank of list">
-	//                 <td width="10%" align="center">{{ $index + 1 }}</td>
-	//                 <td width="70%" align="center">{{ rank.username }}</td>
-	//                 <td width="20%" align="center">{{ rank.speed }}</td>
-	//             </tr>
-	//         </tbody>
-	//     </table>
-	// </template>
-	//
-	// <script>
+
+	var _stateHolder = __webpack_require__(24);
+
 	exports.default = {
 	    props: {
 	        list: {
@@ -24210,6 +24193,12 @@
 	            default: function _default() {
 	                return [];
 	            }
+	        }
+	    },
+
+	    vuex: {
+	        getters: {
+	            userName: _stateHolder.userName
 	        }
 	    }
 	};
@@ -24230,12 +24219,32 @@
 	//     height: 30px;
 	// }
 	// </style>
+	// <template>
+	//     <table align="center">
+	//         <thead>
+	//             <tr>
+	//                 <th width="10%">No.</th>
+	//                 <th width="70%">Alias</th>
+	//                 <th width="20%">Speed</th>
+	//             </tr>
+	//         </thead>
+	//         <tbody>
+	//             <tr v-for="rank of list" v-bind:style="{ backgroundColor: rank.username === userName ? 'yellow' : 'transparent' }">
+	//                 <td width="10%" align="center">{{ $index + 1 }}</td>
+	//                 <td width="70%" align="center">{{ rank.username }}</td>
+	//                 <td width="20%" align="center">{{ rank.speed }}</td>
+	//             </tr>
+	//         </tbody>
+	//     </table>
+	// </template>
+	//
+	// <script>
 
 /***/ },
 /* 134 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<table align=\"center\" _v-b8b13b44=\"\">\n    <thead _v-b8b13b44=\"\">\n        <tr _v-b8b13b44=\"\">\n            <th width=\"10%\" _v-b8b13b44=\"\">No.</th>\n            <th width=\"70%\" _v-b8b13b44=\"\">Alias</th>\n            <th width=\"20%\" _v-b8b13b44=\"\">Speed</th>\n        </tr>\n    </thead>\n    <tbody _v-b8b13b44=\"\">\n        <tr v-for=\"rank of list\" _v-b8b13b44=\"\">\n            <td width=\"10%\" align=\"center\" _v-b8b13b44=\"\">{{ $index + 1 }}</td>\n            <td width=\"70%\" align=\"center\" _v-b8b13b44=\"\">{{ rank.username }}</td>\n            <td width=\"20%\" align=\"center\" _v-b8b13b44=\"\">{{ rank.speed }}</td>\n        </tr>\n    </tbody>\n</table>\n";
+	module.exports = "\n<table align=\"center\" _v-b8b13b44=\"\">\n    <thead _v-b8b13b44=\"\">\n        <tr _v-b8b13b44=\"\">\n            <th width=\"10%\" _v-b8b13b44=\"\">No.</th>\n            <th width=\"70%\" _v-b8b13b44=\"\">Alias</th>\n            <th width=\"20%\" _v-b8b13b44=\"\">Speed</th>\n        </tr>\n    </thead>\n    <tbody _v-b8b13b44=\"\">\n        <tr v-for=\"rank of list\" v-bind:style=\"{ backgroundColor: rank.username === userName ? 'yellow' : 'transparent' }\" _v-b8b13b44=\"\">\n            <td width=\"10%\" align=\"center\" _v-b8b13b44=\"\">{{ $index + 1 }}</td>\n            <td width=\"70%\" align=\"center\" _v-b8b13b44=\"\">{{ rank.username }}</td>\n            <td width=\"20%\" align=\"center\" _v-b8b13b44=\"\">{{ rank.speed }}</td>\n        </tr>\n    </tbody>\n</table>\n";
 
 /***/ },
 /* 135 */
