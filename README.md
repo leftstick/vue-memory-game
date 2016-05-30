@@ -42,6 +42,10 @@ vue-memory-game
 │   │   │   ├── Logo.vue
 │   │   │   ├── MatchInfo.vue
 │   │   │   └── Score.vue
+│   │   ├── extra
+│   │   │   ├── NameInput.vue
+│   │   │   ├── Rank.vue
+│   │   │   └── RankList.vue
 │   │   ├── footer
 │   │   │   └── PlayStatus.vue
 │   │   │
