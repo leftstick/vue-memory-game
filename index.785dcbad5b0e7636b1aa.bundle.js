@@ -2912,20 +2912,15 @@
 	var _vuex = __webpack_require__(24);
 
 	exports.default = {
-	    data: function data() {
-	        return {
-	            name: this.userName
-	        };
-	    },
 
 	    computed: _extends({}, (0, _vuex.mapGetters)(['userName'])),
 
 	    methods: _extends({}, (0, _vuex.mapActions)(['toggleRank', 'toggleNameInput', 'updateUserName', 'updateRank']), {
-	        modifyName: function modifyName() {
-	            if (!this.name) {
+	        modifyName: function modifyName(e) {
+	            if (!e.target.value) {
 	                return;
 	            }
-	            this.updateUserName(this.name);
+	            this.updateUserName(e.target.value);
 	            this.updateRank();
 	            this.toggleRank(true);
 	            this.toggleNameInput(false);
@@ -2943,26 +2938,17 @@
 	  }, [_h('div', {
 	    staticClass: "naming"
 	  }, [_m(0), " ", _h('input', {
-	    directives: [{
-	      name: "model",
-	      value: (name),
-	      expression: "name"
-	    }],
 	    attrs: {
 	      "type": "text",
 	      "autofocus": "true"
 	    },
 	    domProps: {
-	      "value": _s(name)
+	      "value": userName
 	    },
 	    on: {
 	      "keyup": function($event) {
 	        if ($event.keyCode !== 13) return;
 	        modifyName($event)
-	      },
-	      "input": function($event) {
-	        if ($event.target.composing) return;
-	        name = $event.target.value
 	      }
 	    }
 	  })])])
