@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { flipCard } from 'vuex/actions/controlCenter';
+import { mapActions } from 'vuex';
 
 export default {
 
@@ -32,13 +32,10 @@ export default {
         }
     },
 
-    vuex: {
-        actions: {
-            flipCard
-        }
-    },
-
     methods: {
+        ...mapActions([
+            'flipCard'
+        ]),
         flip: function() {
             if(this.option.flipped){
                 return;

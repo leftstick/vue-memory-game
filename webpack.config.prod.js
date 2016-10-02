@@ -19,7 +19,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                loader: 'babel?{"presets":["es2015"]}',
+                loader: 'babel?{"presets":["es2015"],"plugins": ["transform-object-rest-spread"]}',
                 exclude: /node_modules/
             },
             {
@@ -34,7 +34,8 @@ module.exports = {
     },
     vue: {
         loaders: {
-            js: 'babel?{"presets":["es2015"]}'
+            js: 'babel?{"presets":["es2015"],"plugins": ["transform-object-rest-spread"]}',
+            css: 'vue-style!css'
         }
     },
     resolve: {
@@ -46,7 +47,10 @@ module.exports = {
             '',
             '.js',
             '.vue'
-        ]
+        ],
+        alias: {
+            vue: 'vue/dist/vue.min.js'
+        }
     },
     plugins: [
         new webpack.DefinePlugin({

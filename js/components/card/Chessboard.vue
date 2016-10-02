@@ -7,8 +7,7 @@
 <script>
 import Card from './Card';
 
-import { updateStatus, match, flipCards } from 'js/vuex/actions/controlCenter';
-import { leftMatched, cards, status } from 'js/vuex/getters/stateHolder';
+import { mapActions, mapGetters } from 'vuex';
 
 import { STATUS } from 'js/vuex/store/statusEnum';
 
@@ -20,20 +19,21 @@ export default {
         };
     },
 
-    vuex: {
-        actions: {
-            updateStatus,
-            match,
-            flipCards
-        },
-        getters: {
-            leftMatched,
-            cards,
-            status
-        }
+    computed: {
+        ...mapGetters([
+            'leftMatched',
+            'cards',
+            'status'
+        ])
     },
 
     methods: {
+
+        ...mapActions([
+            'updateStatus',
+            'match',
+            'flipCards'
+        ]),
 
         onFlipped: function(e) {
             if(this.status === STATUS.READY){

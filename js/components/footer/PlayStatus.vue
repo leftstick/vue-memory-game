@@ -7,19 +7,19 @@
 </template>
 
 <script>
-import { status, elapsedMs, userName } from 'vuex/getters/stateHolder';
+import { mapGetters } from 'vuex';
 import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
 
     data: () => STATUS,
 
-    vuex: {
-        getters: {
-            userName,
-            elapsedMs,
-            status
-        }
+    computed: {
+        ...mapGetters([
+            'userName',
+            'elapsedMs',
+            'status'
+        ])
     }
 }
 </script>

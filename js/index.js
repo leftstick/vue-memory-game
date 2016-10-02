@@ -5,4 +5,4 @@ import store from 'js/vuex/store';
 
 //the main entrance
 /* eslint-disable no-new */
-new Vue({el: 'body', components: {Game}, store});
+new Vue({el: '#application', components: {Game}, store});

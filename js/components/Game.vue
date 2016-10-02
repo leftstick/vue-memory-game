@@ -18,25 +18,28 @@ import Status from './footer/PlayStatus';
 import Rank from './extra/Rank';
 import NameInput from './extra/NameInput';
 
-import { reset, updateStatus, setupServerChannel } from 'vuex/actions/controlCenter';
-import { displayRank, displayNameInput } from 'vuex/getters/stateHolder';
+import { mapActions, mapGetters } from 'vuex';
 import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
 
-    //vuex是一个特殊的属性，actions放在里面，
-    //省却了我们手动传入this.$store的麻烦
+    //通过mapGetters将getters映射到computed里
 
-    vuex: {
-        actions: {
-            reset,
-            updateStatus,
-            setupServerChannel
-        },
-        getters: {
-            displayRank,
-            displayNameInput
-        }
+    computed: {
+        ...mapGetters([
+            'displayRank',
+            'displayNameInput'
+        ])
+    },
+
+    //通过mapActions将actions映射到methods里
+
+    methods: {
+        ...mapActions([
+            'reset',
+            'updateStatus',
+            'setupServerChannel'
+        ])
     },
 
     created: function() {

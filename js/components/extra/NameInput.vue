@@ -2,33 +2,34 @@
     <div class="container">
         <div class="naming">
             <h3>Your Name</h3>
-            <input type="text" v-model="name" value={{userName}} v-on:keyup.enter="modifyName" autofocus="true">
+            <input type="text" v-model="name" v-on:keyup.enter="modifyName" autofocus="true">
         </div>
     </div>
 </template>
 
 <script>
-import { toggleRank, toggleNameInput, updateUserName, updateRank } from 'vuex/actions/controlCenter';
-import { userName } from 'vuex/getters/stateHolder';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
     data: function() {
         return {
-            name: ''
+            name: this.userName
         };
     },
-    vuex: {
-        actions: {
-            toggleRank,
-            toggleNameInput,
-            updateUserName,
-            updateRank
-        },
-        getters: {
-            userName
-        }
+
+    computed: {
+        ...mapGetters([
+            'userName'
+        ])
     },
+
     methods: {
+        ...mapActions([
+            'toggleRank',
+            'toggleNameInput',
+            'updateUserName',
+            'updateRank'
+        ]),
         modifyName: function() {
             if(!this.name){
                 return;

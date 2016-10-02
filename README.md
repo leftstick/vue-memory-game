@@ -3,7 +3,7 @@ vue-memory-game
 ![][david-url]
 ![][license-url]
 
-A tiny game written in vue. It's inspired by IgorMinar's [Memory-Game](https://github.com/IgorMinar/Memory-Game). You can view the online demo [here](http://leftstick.github.io/vue-memory-game).
+A tiny game written in `vue2`. It's inspired by IgorMinar's [Memory-Game](https://github.com/IgorMinar/Memory-Game). You can view the online demo [here](http://leftstick.github.io/vue-memory-game).
 
 We choose `single-file-component` pattern as the fundamental of this game. In order to use this pattern, we involved [webpack](http://webpack.github.io/) with [vue-loader](https://github.com/vuejs/vue-loader) to make it possible.
 
@@ -53,10 +53,11 @@ vue-memory-game
 │   │
 │   ├── vuex
 │   │   ├── actions
-│   │   │   ├── controlCenter.js
-│   │   │   └── types.js
+│   │   │   └── index.js
 │   │   ├── getters
-│   │   │   └── stateHolder.js
+│   │   │   └── index.js
+│   │   ├── mutations
+│   │   │   └── index.js
 │   │   └── store
 │   │       ├── index.js
 │   │       └── statusEnum.js

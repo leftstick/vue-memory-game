@@ -14,24 +14,25 @@
 </template>
 
 <script>
-import { reset } from 'js/vuex/actions/controlCenter';
-
-import { ranks } from 'js/vuex/getters/stateHolder';
+import { mapActions, mapGetters } from 'vuex';
 
 import RankList from './RankList';
 
 export default {
 
-    vuex: {
-        actions: {
-            reset
-        },
-        getters: {
-            ranks
-        }
+    computed: {
+        ...mapGetters([
+            'ranks'
+        ])
     },
 
-    components: {RankList}
+    methods: {
+        ...mapActions([
+            'reset'
+        ])
+    },
+
+    components: { RankList }
 }
 </script>
 
