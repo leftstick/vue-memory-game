@@ -2,7 +2,7 @@
     <div class="container">
         <div class="naming">
             <h3>Your Name</h3>
-            <input type="text" v-model="name" v-on:keyup.enter="modifyName" autofocus="true">
+            <input type="text" :value="userName" v-on:keyup.enter="modifyName" autofocus="true">
         </div>
     </div>
 </template>
@@ -11,11 +11,6 @@
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
-    data: function() {
-        return {
-            name: this.userName
-        };
-    },
 
     computed: {
         ...mapGetters([
@@ -30,11 +25,11 @@ export default {
             'updateUserName',
             'updateRank'
         ]),
-        modifyName: function() {
-            if(!this.name){
+        modifyName: function(e) {
+            if(!e.target.value){
                 return;
             }
-            this.updateUserName(this.name);
+            this.updateUserName(e.target.value);
             this.updateRank();
             this.toggleRank(true);
             this.toggleNameInput(false);
