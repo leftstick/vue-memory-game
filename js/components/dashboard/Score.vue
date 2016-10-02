@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import { highestSpeed } from 'vuex/getters/stateHolder';
+import { mapGetters } from 'vuex';
 
 export default {
-    vuex: {
-        getters: {
-            highestSpeed
-        }
+    computed: {
+        ...mapGetters([
+            'highestSpeed'
+        ])
     }
 }
 </script>

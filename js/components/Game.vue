@@ -13,19 +13,18 @@ import Dashboard from './dashboard/Dashboard';
 import Chessboard from './card/Chessboard';
 import Status from './footer/PlayStatus';
 
-import { reset, updateStatus } from 'vuex/actions/controlCenter';
+import { mapActions } from 'vuex';
 import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
 
-    //vuex是一个特殊的属性，actions放在里面，
-    //省却了我们手动传入this.$store的麻烦
+    //通过mapActions将actions映射到methods里
 
-    vuex: {
-        actions: {
-            reset,
-            updateStatus
-        }
+    methods: {
+        ...mapActions([
+            'updateStatus',
+            'reset'
+        ])
     },
 
     created: function() {

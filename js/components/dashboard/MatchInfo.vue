@@ -7,13 +7,13 @@
 
 <script>
 
-import { leftMatched } from 'vuex/getters/stateHolder';
+import { mapGetters } from 'vuex';
 
 export default {
-    vuex: {
-        getters: {
-            leftMatched
-        }
+    computed: {
+        ...mapGetters([
+            'leftMatched'
+        ])
     }
 }
 </script>

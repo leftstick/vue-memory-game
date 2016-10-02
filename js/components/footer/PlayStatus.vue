@@ -8,8 +8,7 @@
 </template>
 
 <script>
-import { reset } from 'vuex/actions/controlCenter';
-import { status, elapsedMs } from 'vuex/getters/stateHolder';
+import { mapActions, mapGetters } from 'vuex';
 
 import { STATUS } from 'vuex/store/statusEnum';
 
@@ -19,14 +18,17 @@ export default {
         return STATUS;
     },
 
-    vuex: {
-        actions: {
-            reset
-        },
-        getters: {
-            status,
-            elapsedMs
-        }
+    computed: {
+        ...mapGetters([
+            'status',
+            'elapsedMs'
+        ])
+    },
+
+    methods: {
+        ...mapActions([
+            'reset'
+        ])
     }
 
 }
