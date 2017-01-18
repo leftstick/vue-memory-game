@@ -23,7 +23,7 @@ export default {
     props: {
         option: {
             type: Object,
-            default: function () {
+            default () {
                 return {
                     flipped: false,
                     cardName: ''
@@ -36,7 +36,7 @@ export default {
         ...mapActions([
             'flipCard'
         ]),
-        flip: function() {
+        flip() {
             if(this.option.flipped){
                 return;
             }

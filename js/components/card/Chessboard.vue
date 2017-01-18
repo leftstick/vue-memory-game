@@ -13,7 +13,7 @@ import { STATUS } from 'js/vuex/store/statusEnum';
 
 export default {
 
-    data: function() {
+    data() {
         return {
             lastCard: null
         };
@@ -33,7 +33,7 @@ export default {
             'match',
             'flipCards'
         ]),
-        onFlipped: function(e) {
+        onFlipped(e) {
             if(this.status === STATUS.READY){
                 this.updateStatus(STATUS.PLAYING);
             }

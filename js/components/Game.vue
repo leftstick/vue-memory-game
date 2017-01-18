@@ -27,7 +27,7 @@ export default {
         ])
     },
 
-    created: function() {
+    created() {
         this.updateStatus(STATUS.READY);
         this.reset();
     },

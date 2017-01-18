@@ -14,7 +14,7 @@ import { STATUS } from 'vuex/store/statusEnum';
 
 export default {
 
-    data: function() {
+    data() {
         return STATUS;
     },
 
