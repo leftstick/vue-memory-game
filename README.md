@@ -5,6 +5,8 @@ vue-memory-game
 
 A tiny game written in `vue2`. It's inspired by IgorMinar's [Memory-Game](https://github.com/IgorMinar/Memory-Game). You can view the online demo [here](http://leftstick.github.io/vue-memory-game).
 
+>If you are looking for `angular2` version, check it [here](https://github.com/leftstick/angular2-memory-game)
+
 The online demo is implemented with extra rank system involved, you can check the source code at `stage-1` branch.
 
 We choose `single-file-component` pattern as the fundamental of this game. In order to use this pattern, we involved [webpack](http://webpack.github.io/) with [vue-loader](https://github.com/vuejs/vue-loader) to make it possible.
