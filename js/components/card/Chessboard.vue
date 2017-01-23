@@ -9,7 +9,7 @@ import Card from './Card';
 
 import { mapActions, mapGetters } from 'vuex';
 
-import { STATUS } from 'js/vuex/store/statusEnum';
+import { STATUS } from '../../vuex/store/statusEnum';
 
 export default {
 

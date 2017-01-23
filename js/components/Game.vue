@@ -14,7 +14,7 @@ import Chessboard from './card/Chessboard';
 import Status from './footer/PlayStatus';
 
 import { mapActions } from 'vuex';
-import { STATUS } from 'vuex/store/statusEnum';
+import { STATUS } from '../vuex/store/statusEnum';
 
 export default {
 

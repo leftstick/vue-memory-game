@@ -4,4 +4,5 @@
     "files.assosciations": {
         "*.html_vm": "html"
     },
+    "editor.formatOnSave": true
 }

@@ -1,6 +1,6 @@
 
-import {shuffle} from 'lib/shuffle';
-import {STATUS} from 'vuex/store/statusEnum';
+import {shuffle} from '../../lib/shuffle';
+import {STATUS} from '../store/statusEnum';
 
 const cardNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
     'that-guy', 'zeppelin'];

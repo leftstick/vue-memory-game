@@ -9,7 +9,7 @@ A tiny game written in `vue2`. It's inspired by IgorMinar's [Memory-Game](https:
 
 The online demo is implemented with extra rank system involved, you can check the source code at `stage-1` branch.
 
-We choose `single-file-component` pattern as the fundamental of this game. In order to use this pattern, we involved [webpack](http://webpack.github.io/) with [vue-loader](https://github.com/vuejs/vue-loader) to make it possible.
+We choose `single-file-component` pattern as the fundamental of this game. In order to use this pattern, we involved [webpack](https://webpack.js.org/) with [vue-loader](https://github.com/vuejs/vue-loader) to make it possible.
 
 ## Components Tree ##
 

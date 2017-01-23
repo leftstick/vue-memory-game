@@ -1,7 +1,7 @@
-import 'css/main.css';
+import '../css/main.css';
 import Vue from 'vue';
 import Game from './components/Game';
-import store from 'js/vuex/store';
+import store from './vuex/store';
 
 //the main entrance
 /* eslint-disable no-new */
