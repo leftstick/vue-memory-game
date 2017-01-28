@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "A tiny game written in vue. It's inspired by IgorMinar's Memory-Game",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --port 8080",
+    "start": "webpack-dev-server --hot --inline --host 0.0.0.0 --port 8080",
     "dist": "rm -rf dist; webpack --config webpack.config.prod.js",
     "deploy": "npm run dist; git checkout gh-pages; rm -rf *.png; rm -rf *.js; rm -rf *.ico; rm -rf index.html; mv dist/* .;"
   },
