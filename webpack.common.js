@@ -16,7 +16,7 @@ module.exports = {
                     loader: 'vue-loader',
                     options: {
                         loaders: {
-                            js: 'babel-loader?{"presets":["es2015"],"plugins": ["transform-object-rest-spread"]}',
+                            js: 'babel-loader?{"presets":[["es2015", {"modules": false}]],"plugins": ["transform-object-rest-spread"]}',
                             css: 'vue-style-loader!css-loader'
                         }
                     }
@@ -29,7 +29,7 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: ['es2015'],
+                            presets: [['es2015', {modules: false}]],
                             plugins: ['transform-object-rest-spread']
                         }
                     }
