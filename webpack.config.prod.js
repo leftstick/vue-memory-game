@@ -5,7 +5,8 @@ const webpack = require('webpack');
 
 module.exports = merge(common, {
     output: {
-        path: resolve(__dirname, 'dist')
+        path: resolve(__dirname, 'dist'),
+        publicPath: '/vue-memory-game/'
     },
     plugins: [
         new webpack.DefinePlugin({
