@@ -15,8 +15,5 @@ module.exports = merge(common, {
         host: '0.0.0.0',
         hot: true,
         inline: true
-    },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ]
+    }
 });
