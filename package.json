@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "A tiny game written in vue. It's inspired by IgorMinar's Memory-Game",
   "scripts": {
-    "start": "webpack-dev-server --content-base build/ --hot --host 0.0.0.0",
+    "start": "webpack-dev-server --hot --inline --host 0.0.0.0",
     "dist": "rm -rf dist; webpack --config webpack.config.prod.js",
     "deploy": "npm run dist; git checkout gh-pages; rm -rf *.png; rm -rf *.js; rm -rf *.ico; rm -rf index.html; mv dist/* .;"
   },
@@ -23,25 +23,27 @@
   },
   "homepage": "https://github.com/leftstick/vue-memory-game#readme",
   "dependencies": {
-    "vue": "^2.0.5",
-    "vuex": "^2.0.0",
-    "wilddog": "^2.2.0"
+    "vue": "^2.1.10",
+    "vuex": "^2.1.1",
+    "wilddog": "^2.4.4"
   },
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.7",
-    "babel-plugin-transform-object-rest-spread": "^6.16.0",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-es2015": "^6.18.0",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.9.0",
-    "html-webpack-plugin": "^2.24.1",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.10.0",
+    "html-webpack-plugin": "^2.26.0",
     "style-loader": "^0.13.1",
-    "vue-hot-reload-api": "^2.0.6",
+    "vue-hot-reload-api": "^2.0.8",
     "vue-html-loader": "^1.2.3",
-    "vue-loader": "^9.8.1",
+    "vue-loader": "^10.1.2",
     "vue-style-loader": "^1.0.0",
-    "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "vue-template-compiler": "^2.1.10",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0",
+    "webpack-merge": "^2.6.0"
   }
 }
