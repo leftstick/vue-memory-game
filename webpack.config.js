@@ -6,7 +6,7 @@ module.exports = merge(common, {
     output: {
         path: resolve(__dirname, 'build')
     },
-    devtool: '#eval-source-map',
+    devtool: '#source-map',
     devServer: {
         contentBase: join(__dirname, 'build'),
         compress: false,

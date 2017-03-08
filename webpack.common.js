@@ -42,10 +42,7 @@ module.exports = {
         extensions: [
             '.js',
             '.vue'
-        ],
-        alias: {
-            vue: resolve(__dirname, 'node_modules', 'vue', 'dist', 'vue.min.js')
-        }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({

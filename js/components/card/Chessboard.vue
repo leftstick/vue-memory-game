@@ -1,6 +1,6 @@
 <template>
     <div class="chessboard">
-        <Card v-for="card of cards" :key="card.cardName" :option="card" v-on:flipped="onFlipped"></Card>
+        <Card v-for="(card, index) of cards" :key="index" :option="card" v-on:flipped="onFlipped"></Card>
     </div>
 </template>
 
