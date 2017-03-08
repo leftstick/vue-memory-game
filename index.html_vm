@@ -12,8 +12,6 @@
 
 </head>
 <body>
-    <div id="application">
-        <Game></Game>
-    </div>
+    <div id="application"></div>
 </body>
 </html>
