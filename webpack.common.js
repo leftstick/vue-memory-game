@@ -16,7 +16,7 @@ module.exports = {
                     loader: 'vue-loader',
                     options: {
                         loaders: {
-                            js: 'babel-loader?{"presets":[["es2015", {"modules": false}]],"plugins": ["transform-object-rest-spread"]}',
+                            js: 'babel-loader',
                             css: 'vue-style-loader!css-loader'
                         }
                     }
@@ -25,15 +25,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: [['es2015', {modules: false}]],
-                            plugins: ['transform-object-rest-spread']
-                        }
-                    }
-                ],
+                use: ['babel-loader'],
                 exclude: /node_modules/
             },
             {
