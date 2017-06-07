@@ -23,29 +23,29 @@
   },
   "homepage": "https://github.com/leftstick/vue-memory-game#readme",
   "engines": {
-    "node" : ">=7.0"
+    "node": ">=7.0"
   },
   "dependencies": {
-    "vue": "^2.2.6",
+    "vue": "^2.3.3",
     "vuex": "^2.3.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
-    "babel-loader": "^6.4.1",
+    "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
-    "css-loader": "^0.28.0",
-    "file-loader": "^0.11.1",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.28.0",
-    "style-loader": "^0.16.1",
+    "style-loader": "^0.18.2",
     "vue-hot-reload-api": "^2.1.0",
     "vue-html-loader": "^1.2.4",
-    "vue-loader": "^11.3.4",
-    "vue-style-loader": "^3.0.0",
-    "vue-template-compiler": "^2.2.6",
-    "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.2",
+    "vue-loader": "^12.2.1",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5",
     "webpack-merge": "^4.1.0"
   }
 }
