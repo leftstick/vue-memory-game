@@ -14,6 +14,7 @@ module.exports = merge(common, {
                 NODE_ENV: '"production"'
             }
         }),
+        new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
