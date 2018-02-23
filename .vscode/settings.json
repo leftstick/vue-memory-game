@@ -1,8 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "editor.fontSize": 15,
-    "files.assosciations": {
-        "*.html_vm": "html"
-    },
-    "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2
 }
