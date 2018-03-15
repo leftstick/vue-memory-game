@@ -4,6 +4,7 @@ const common = require('./webpack.common')
 const webpack = require('webpack')
 
 module.exports = merge(common, {
+  mode: 'production',
   output: {
     path: resolve(__dirname, 'dist'),
     publicPath: '/vue-memory-game/'
@@ -14,11 +15,6 @@ module.exports = merge(common, {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
+    new webpack.optimize.ModuleConcatenationPlugin()
   ]
 })

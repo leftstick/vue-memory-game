@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --inline --host 0.0.0.0 --port 8080",
     "dist": "rm -rf dist; webpack --config webpack.config.prod.js",
-    "deploy": "npm run dist; git checkout gh-pages; rm -rf *.png; rm -rf *.js; rm -rf *.ico; rm -rf index.html; mv dist/* .;"
+    "deploy": "npm run dist; git checkout gh-pages; rm -rf *.png *.js *.ico index.html; mv dist/* ."
   },
   "repository": {
     "type": "git",
@@ -26,37 +26,38 @@
     "node": ">=7.0"
   },
   "dependencies": {
-    "vue": "^2.5.13",
+    "vue": "^2.5.16",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.10",
-    "eslint": "^4.18.1",
+    "eslint": "^4.18.2",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0",
-    "eslint-loader": "^1.9.0",
+    "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-prettier": "2.6.0",
-    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.2.2",
-    "file-loader": "^1.1.9",
-    "html-webpack-plugin": "^2.30.1",
-    "style-loader": "^0.20.2",
+    "eslint-plugin-vue": "^4.3.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.0.6",
+    "style-loader": "^0.20.3",
     "vue-hot-reload-api": "^2.3.0",
     "vue-html-loader": "^1.2.4",
-    "vue-loader": "^14.1.1",
+    "vue-loader": "^14.2.1",
     "vue-style-loader": "^4.0.2",
-    "vue-template-compiler": "^2.5.13",
-    "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1",
     "webpack-merge": "^4.1.2"
   }
 }
