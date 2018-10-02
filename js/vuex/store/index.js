@@ -5,7 +5,7 @@ import getters from '../getters'
 import actions from '../actions'
 import mutations from '../mutations'
 
-//have vuex involved
+// have vuex involved
 Vue.use(Vuex)
 
 const state = {

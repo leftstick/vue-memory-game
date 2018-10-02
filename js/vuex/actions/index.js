@@ -5,7 +5,7 @@ const cardNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'sk
 
 let timerId
 
-let statusHandler = {
+const statusHandler = {
   PLAYING: function({ commit }) {
     timerId = setInterval(function() {
       commit('counting')

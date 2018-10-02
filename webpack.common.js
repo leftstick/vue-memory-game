@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   entry: {
@@ -11,9 +12,9 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /\.vue$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/
+        test: /\.(js|vue)$/,
+        exclude: /node_modules/,
+        use: ['eslint-loader']
       },
       {
         test: /\.vue$/,
@@ -43,6 +44,7 @@ module.exports = {
     extensions: ['.js', '.vue']
   },
   plugins: [
+    new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       inject: 'body',
