@@ -16,18 +16,16 @@ import { mapActions } from 'vuex'
 import { STATUS } from '../vuex/store/statusEnum'
 
 export default {
-  // 通过mapActions将actions映射到methods里
-
-  methods: {
-    ...mapActions(['updateStatus', 'reset'])
-  },
-
+  components: { Dashboard, Chessboard, Status },
   created() {
     this.updateStatus(STATUS.READY)
     this.reset()
   },
+  // 通过mapActions将actions映射到methods里
 
-  components: { Dashboard, Chessboard, Status }
+  methods: {
+    ...mapActions(['updateStatus', 'reset'])
+  }
 }
 </script>
 

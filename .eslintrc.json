@@ -8,16 +8,6 @@
     "node": true,
     "browser": true
   },
-  "extends": ["plugin:vue/base", "standard", "prettier", "prettier/standard"],
-  "plugins": ["prettier", "standard"],
-  "rules": {
-    "prettier/prettier": "error",
-    "prefer-const": [
-      "error",
-      {
-        "destructuring": "any",
-        "ignoreReadBeforeAssign": false
-      }
-    ]
-  }
+  "extends": ["plugin:vue/recommended", "eslint:recommended", "prettier/vue", "plugin:prettier/recommended"],
+  "rules": {}
 }

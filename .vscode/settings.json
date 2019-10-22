@@ -3,5 +3,12 @@
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
-  "npm.updateStrategy": "SEMVER"
+  "npm.updateStrategy": "SEMVER",
+  "vetur.format.enable": true,
+  "vetur.format.defaultFormatterOptions": {
+    "prettyhtml": {
+      "printWidth": 120, // No line exceeds 100 characters
+      "singleQuote": false // Prefer double quotes over single quotes
+    }
+  }
 }

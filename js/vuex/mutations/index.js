@@ -21,9 +21,11 @@ export default {
   },
 
   flips(st, cards) {
-    st.cards.filter(cc => cards.indexOf(cc) >= 0).forEach(cc => {
-      cc.flipped = !cc.flipped
-    })
+    st.cards
+      .filter(cc => cards.indexOf(cc) >= 0)
+      .forEach(cc => {
+        cc.flipped = !cc.flipped
+      })
   },
 
   counting(st) {

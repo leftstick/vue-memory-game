@@ -1,16 +1,16 @@
 <template>
-  <div class="container" v-on:click="flip">
-    <div class="card" v-bind:class="{ flipped: option.flipped }">
-      <img class="front" v-if="option.cardName === '8-ball'" src="../../../img/8-ball.png"/>
-      <img class="front" v-if="option.cardName === 'baked-potato'" src="../../../img/baked-potato.png"/>
-      <img class="front" v-if="option.cardName === 'dinosaur'" src="../../../img/dinosaur.png"/>
-      <img class="front" v-if="option.cardName === 'kronos'" src="../../../img/kronos.png"/>
-      <img class="front" v-if="option.cardName === 'rocket'" src="../../../img/rocket.png"/>
-      <img class="front" v-if="option.cardName === 'skinny-unicorn'" src="../../../img/skinny-unicorn.png"/>
-      <img class="front" v-if="option.cardName === 'that-guy'" src="../../../img/that-guy.png"/>
-      <img class="front" v-if="option.cardName === 'zeppelin'" src="../../../img/zeppelin.png"/>
+  <div class="container" @click="flip">
+    <div class="card" :class="{ flipped: option.flipped }">
+      <img v-if="option.cardName === '8-ball'" class="front" src="../../../img/8-ball.png" />
+      <img v-if="option.cardName === 'baked-potato'" class="front" src="../../../img/baked-potato.png" />
+      <img v-if="option.cardName === 'dinosaur'" class="front" src="../../../img/dinosaur.png" />
+      <img v-if="option.cardName === 'kronos'" class="front" src="../../../img/kronos.png" />
+      <img v-if="option.cardName === 'rocket'" class="front" src="../../../img/rocket.png" />
+      <img v-if="option.cardName === 'skinny-unicorn'" class="front" src="../../../img/skinny-unicorn.png" />
+      <img v-if="option.cardName === 'that-guy'" class="front" src="../../../img/that-guy.png" />
+      <img v-if="option.cardName === 'zeppelin'" class="front" src="../../../img/zeppelin.png" />
 
-      <img class="back" src="../../../img/back.png"/>
+      <img class="back" src="../../../img/back.png" />
     </div>
   </div>
 </template>
@@ -19,6 +19,7 @@
 import { mapActions } from 'vuex'
 
 export default {
+  components: {},
   props: {
     option: {
       type: Object,
@@ -40,9 +41,7 @@ export default {
       this.flipCard(this.option)
       this.$emit('flipped', this.option)
     }
-  },
-
-  components: {}
+  }
 }
 </script>
 

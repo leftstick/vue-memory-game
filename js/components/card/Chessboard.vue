@@ -1,6 +1,6 @@
 <template>
   <div class="chessboard">
-    <Card v-for="(card, index) of cards" :key="index" :option="card" v-on:flipped="onFlipped"></Card>
+    <Card v-for="(card, index) of cards" :key="index" :option="card" @flipped="onFlipped"></Card>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ import { mapActions, mapGetters } from 'vuex'
 import { STATUS } from '../../vuex/store/statusEnum'
 
 export default {
+  components: { Card },
   data() {
     return {
       lastCard: null
@@ -42,9 +43,7 @@ export default {
         this.flipCards([lastCard, e])
       }, 1000)
     }
-  },
-
-  components: { Card }
+  }
 }
 </script>
 
