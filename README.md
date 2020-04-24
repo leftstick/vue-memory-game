@@ -1,24 +1,23 @@
-vue-memory-game
-==================
+# vue-memory-game
+
 ![][david-url]
 ![][license-url]
 
 A tiny game written in `vue2`. It's inspired by IgorMinar's [Memory-Game](https://github.com/IgorMinar/Memory-Game). You can view the online demo [here](http://leftstick.github.io/vue-memory-game).
 
->If you are looking for `angular5` version, check it [here](https://github.com/leftstick/angular5-memory-game)
+> If you are looking for `angular5` version, check it [here](https://github.com/leftstick/angular5-memory-game)
 
->If you are looking for `react` version, check it [here](https://github.com/leftstick/react-memory-game)
+> If you are looking for `react` version, check it [here](https://github.com/leftstick/react-memory-game)
 
 The online demo is implemented with extra rank system involved, you can check the source code at `stage-1` branch.
 
 We choose `single-file-component` pattern as the fundamental of this game. In order to use this pattern, we involved [webpack](https://webpack.js.org/) with [vue-loader](https://github.com/vuejs/vue-loader) to make it possible.
 
-## Components Tree ##
+## Components Tree
 
 ![](https://raw.githubusercontent.com/leftstick/vue-memory-game/master/docs/img/components.png)
 
-
-## Components break down ##
+## Components break down
 
 1. `Game`, the whole game board
 2. `Dashboard`, the panel on the top, including "logo", "progress", "best result"
@@ -29,7 +28,7 @@ We choose `single-file-component` pattern as the fundamental of this game. In or
 7. `Card`, each card in the `Chessboard`
 8. `PlayStatus`, the footer part, displaying current status of game
 
-## File Structure ##
+## File Structure
 
 ```
 vue-memory-game
@@ -72,12 +71,16 @@ vue-memory-game
 └── webpack.config.prod.js
 ```
 
-## Detail Explanation? ##
+## Detail Explanation?
 
-* [Chinese Edition](https://segmentfault.com/a/1190000005168085)
+- [Chinese Edition](https://segmentfault.com/a/1190000005168085)
 
+## Want Having a try locally?
 
-## Want Having a try locally? ##
+### Running Environment
+
+- [node.js](https://nodejs.org/en/), version `>=10`
+- [yarn](https://classic.yarnpkg.com/lang/en/), version `~1`
 
 ```bash
 #cloning code
@@ -85,18 +88,16 @@ git clone https://github.com/leftstick/vue-memory-game.git
 cd vue-memory-game
 
 #install dependencies
-npm install
+yarn
 #start debug server
-npm start
+yarn start
 ```
 
 Now, view the demo at [http://localhost:8080](http://localhost:8080)
 
-
-## LICENSE ##
+## LICENSE
 
 [MIT License](https://raw.githubusercontent.com/leftstick/vue-memory-game/master/LICENSE)
-
 
 [david-url]: https://david-dm.org/leftstick/vue-memory-game.png
 [license-url]: https://img.shields.io/github/license/leftstick/vue-memory-game.svg
