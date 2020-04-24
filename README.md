@@ -82,6 +82,10 @@ vue-memory-game
 - [node.js](https://nodejs.org/en/), version `>=10`
 - [yarn](https://classic.yarnpkg.com/lang/en/), version `~1`
 
+### Recommended Editor
+
+- [visual studio code](https://code.visualstudio.com/)
+
 ```bash
 #cloning code
 git clone https://github.com/leftstick/vue-memory-game.git
