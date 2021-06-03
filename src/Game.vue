@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent } from 'vue'
 import { mapMutations } from 'vuex'
 import { ScoreBoard, ChessBoard, GameStatus } from '@/components'
 
