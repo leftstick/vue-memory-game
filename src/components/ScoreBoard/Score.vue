@@ -1,22 +1,21 @@
 <template>
-  <div class="board">
-    <span>Pairs Left To Match</span>
-    <h2>{{ leftMatched }}</h2>
+  <div class="score">
+    <span>Highest Record</span>
+    <h2>{{ highestRecord }}</h2>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { mapGetters } from 'vuex'
-
-export default {
-  computed: {
-    ...mapGetters(['leftMatched'])
-  }
-}
+export default defineComponent({
+  name: 'Score',
+  computed: mapGetters(['highestRecord'])
+})
 </script>
 
 <style scoped>
-.board {
+.score {
   width: 120px;
   height: 100px;
   padding: 10px;
@@ -41,22 +40,21 @@ h2 {
   color: #fff;
 }
 @media screen and (max-width: 450px) {
-  .board {
+  .score {
     width: 105px;
   }
   span {
     font-size: 17px;
   }
 }
-
 @media screen and (max-width: 380px) {
-  .board {
+  .score {
     width: 95px;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .board {
+  .score {
     width: 90px;
   }
   span {

@@ -3,72 +3,66 @@
 ![][david-url]
 ![][license-url]
 
-A tiny game written in `vue2`. It's inspired by IgorMinar's [Memory-Game](https://github.com/IgorMinar/Memory-Game). You can view the online demo [here](http://leftstick.github.io/vue-memory-game).
+A tiny game written in `vue3`. It's inspired by IgorMinar's [Memory-Game](https://github.com/IgorMinar/Memory-Game). You can view the online demo [here](http://leftstick.github.io/vue-memory-game).
 
 > If you are looking for `angular5` version, check it [here](https://github.com/leftstick/angular5-memory-game)
 
 > If you are looking for `react` version, check it [here](https://github.com/leftstick/react-memory-game)
 
-The online demo is implemented with extra rank system involved, you can check the source code at `stage-1` branch.
-
-We choose `single-file-component` pattern as the fundamental of this game. In order to use this pattern, we involved [webpack](https://webpack.js.org/) with [vue-loader](https://github.com/vuejs/vue-loader) to make it possible.
+[vite](https://vitejs.dev) is involved as build tool here.
 
 ## Components Tree
 
-![](https://raw.githubusercontent.com/leftstick/vue-memory-game/master/docs/img/components.png)
+![](./docs/img/components.png)
 
 ## Components break down
 
 1. `Game`, the whole game board
-2. `Dashboard`, the panel on the top, including "logo", "progress", "best result"
-3. `Logo`, on the left of `Dashboard`, showing the game Logo
-4. `MatchInfo`, on the center of `Dashboard`, showing the current matching information
-5. `Score`, on the right of `Dashboard`, showing the best result
-6. `Chessboard`, on the center of `Game`, the playing area
+2. `ScoreBoard`, the panel on the top, including "Logo", "Progress", "Highest Record"
+3. `Logo`, on the left of `ScoreBoard`, showing the game Logo
+4. `Progress`, on the center of `ScoreBoard`, showing the current matching information
+5. `Score`, on the right of `ScoreBoard`, showing the best result
+6. `ChessBoard`, on the center of `Game`, the playing area
 7. `Card`, each card in the `Chessboard`
-8. `PlayStatus`, the footer part, displaying current status of game
+8. `GameStatus`, the footer part, displaying current status of game
 
 ## File Structure
 
 ```
 vue-memory-game
-├── css
-│   └── main.css
-├── img
-│   ├── ...
-│   └── zeppelin.png
-├── js
+├── src
+|   ├── assets
+|   |   ├── 8-ball.png
+|   |   ├── ...
+|   |   └── zeppelin.png
+│   │
 │   ├── components
-│   │   ├── card
+│   │   ├── ChessBoard
 │   │   │   ├── Card.vue
-│   │   │   └── Chessboard.vue
-│   │   ├── dashboard
-│   │   │   ├── Dashboard.vue
+│   │   │   └── index.vue
+│   │   ├── ScoreBoard
+│   │   │   ├── index.vue
 │   │   │   ├── Logo.vue
-│   │   │   ├── MatchInfo.vue
+│   │   │   ├── Progress.vue
 │   │   │   └── Score.vue
-│   │   ├── footer
-│   │   │   └── PlayStatus.vue
-│   │   │
+│   │   ├── GameStatus.vue
 │   │   └── Game.vue
 │   │
-│   ├── vuex
-│   │   ├── actions
-│   │   │   └── index.js
-│   │   ├── getters
-│   │   │   └── index.js
-│   │   ├── mutations
-│   │   │   └── index.js
-│   │   └── store
-│   │       ├── index.js
-│   │       └── statusEnum.js
+│   ├── stores
+│   │   ├── CountTimer.ts
+│   │   ├── GameStore.ts
+│   │   └── index.ts
 │   │
-│   └── index.js
+│   ├── Game.vue
+│   ├── IType.ts
+│   ├── main.ts
+│   ├── shims-vue.d.ts
+│   └── vite-env.d.ts
 │
-├── index.html_vm
+├── index.html
 ├── package.json
-├── webpack.config.js
-└── webpack.config.prod.js
+├── tsconfig.json
+└── vite.config.ts
 ```
 
 ## Detail Explanation?
@@ -97,7 +91,7 @@ yarn
 yarn start
 ```
 
-Now, view the demo at [http://localhost:8080](http://localhost:8080)
+Now, view the demo at [http://localhost:3000/vue-memory-game/](http://localhost:3000/vue-memory-game/)
 
 ## LICENSE
 

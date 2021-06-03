@@ -1,10 +1,9 @@
 {
-  "name": "vue-memory-game",
-  "version": "2.0.0",
-  "description": "A tiny game written in vue. It's inspired by IgorMinar's Memory-Game",
+  "version": "3.0.0",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --host 0.0.0.0 --port 8080",
-    "build": "rm -rf dist && webpack --config webpack.config.prod.js",
+    "start": "vite",
+    "build": "vue-tsc --noEmit && vite build --target=es2015",
+    "serve": "vite preview",
     "deploy": "yarn build && gh-pages -d dist"
   },
   "repository": {
@@ -23,37 +22,19 @@
   },
   "homepage": "https://github.com/leftstick/vue-memory-game#readme",
   "engines": {
-    "node": ">=7.0"
+    "node": ">=10.0"
   },
   "dependencies": {
-    "vue": "^2.6.11",
-    "vuex": "^3.5.1"
+    "vue": "^3.0.11",
+    "vuex": "^4.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/plugin-transform-runtime": "^7.10.5",
-    "@babel/runtime": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.6.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-prettier": "3.1.4",
-    "eslint-plugin-vue": "^6.2.2",
-    "file-loader": "^6.0.0",
-    "gh-pages": "^3.1.0",
-    "html-webpack-plugin": "^4.3.0",
-    "style-loader": "^1.2.1",
-    "vue-hot-reload-api": "^2.3.4",
-    "vue-html-loader": "^1.2.4",
-    "vue-loader": "^15.9.3",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.0.9"
+    "@types/vfile-message": "^2.0.0",
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.11",
+    "gh-pages": "^3.2.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.3.6",
+    "vue-tsc": "^0.1.7"
   }
 }

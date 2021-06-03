@@ -1,14 +1,10 @@
-// Place your settings in this file to overwrite default and user settings.
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
-  "npm.updateStrategy": "SEMVER",
-  "vetur.format.enable": true,
-  "vetur.format.defaultFormatterOptions": {
-    "prettyhtml": {
-      "printWidth": 120, // No line exceeds 100 characters
-      "singleQuote": false // Prefer double quotes over single quotes
-    }
+  "stylusSupremacy.insertBraces": true,
+  "stylusSupremacy.insertColons": true,
+  "stylusSupremacy.insertSemicolons": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

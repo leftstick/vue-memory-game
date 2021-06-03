@@ -1,9 +1,16 @@
 <template>
-  <h1 class="logo"><a href="https://github.com/leftstick/vue-memory-game" target="_blank">Memory</a></h1>
+  <h1 class="logo">
+    <a href="https://github.com/leftstick/vue-memory-game" target="_blank"
+      >Memory</a
+    >
+  </h1>
 </template>
 
-<script>
-export default {}
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name: 'Logo'
+})
 </script>
 
 <style scoped>
