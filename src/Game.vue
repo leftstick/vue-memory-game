@@ -7,16 +7,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { mapMutations } from 'vuex'
+import { defineComponent, onMounted } from 'vue'
+import { useStore } from 'vuex'
 import { ScoreBoard, ChessBoard, GameStatus } from '@/components'
+
+import { GameStoreKey } from '@/stores'
 
 export default defineComponent({
   name: 'Game',
-  mounted() {
-    this.reset()
+  setup: () => {
+    const { commit } = useStore(GameStoreKey)
+    onMounted(() => {
+      commit('reset')
+    })
   },
-  methods: mapMutations(['reset']),
   components: { ScoreBoard, ChessBoard, GameStatus }
 })
 </script>
