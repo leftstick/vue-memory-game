@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
-import { mapMutations, mapGetters, useStore } from 'vuex'
+import { useStore } from 'vuex'
 import { GameStoreKey } from '@/stores'
 import { IStatus } from '@/IType'
 
