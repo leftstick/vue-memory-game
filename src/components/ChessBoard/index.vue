@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue'
-import { useStore, mapGetters } from 'vuex'
+import { useStore } from 'vuex'
 import { ICard, IStatus } from '@/IType'
 import { GameStoreKey } from '@/stores'
 import Card from './Card.vue'
@@ -19,6 +19,7 @@ export default defineComponent({
     const { state, dispatch, commit } = useStore(GameStoreKey)
     const realtimeStatus = computed(() => state.status)
     const realtimeNonMatchedPairs = computed(() => state.nonMatchedPairs)
+    const realtimeCards = computed(() => state.cards)
 
     const onFlip = (e: ICard) => {
       if (realtimeStatus.value === IStatus.READY) {
@@ -39,16 +40,17 @@ export default defineComponent({
 
       const savedLastCard = lastCard.value
       lastCard.value = null
-      setTimeout(() => {
-        commit('flips', [savedLastCard, e])
-      }, 1000)
+      dispatch('flipsDelay', {
+        timeout: 1000,
+        cards: [savedLastCard, e]
+      })
     }
 
     return {
-      onFlip
+      onFlip,
+      cards: realtimeCards
     }
-  },
-  computed: mapGetters(['cards'])
+  }
 })
 </script>
 

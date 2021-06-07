@@ -28,6 +28,11 @@ const GameStore = createStore<IState>({
       context.commit('changeStatus', status)
       CountTimer.tryStartGame(status, context)
       CountTimer.tryEndGame(status, context)
+    },
+    flipsDelay: (context, { timeout, cards }: { timeout: number; cards: ICard[] }) => {
+      setTimeout(() => {
+        context.commit('flips', cards)
+      }, timeout)
     }
   },
   mutations: {

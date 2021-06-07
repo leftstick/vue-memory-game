@@ -6,11 +6,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { mapGetters } from 'vuex'
+import { defineComponent, computed } from 'vue'
+import { useStore } from 'vuex'
+import { GameStoreKey } from '@/stores'
 export default defineComponent({
   name: 'Score',
-  computed: mapGetters(['highestRecord'])
+  setup: () => {
+    const { state } = useStore(GameStoreKey)
+    return {
+      highestRecord: computed(() => state.highestRecord)
+    }
+  }
 })
 </script>
 

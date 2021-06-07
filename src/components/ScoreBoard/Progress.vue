@@ -6,12 +6,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { mapGetters } from 'vuex'
+import { defineComponent, computed } from 'vue'
+import { useStore } from 'vuex'
+import { GameStoreKey } from '@/stores'
 
 export default defineComponent({
   name: 'Progress',
-  computed: mapGetters(['nonMatchedPairs'])
+  setup: () => {
+    const { state } = useStore(GameStoreKey)
+    return {
+      nonMatchedPairs: computed(() => state.nonMatchedPairs)
+    }
+  }
 })
 </script>
 

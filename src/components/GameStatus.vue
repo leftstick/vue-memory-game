@@ -8,18 +8,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { mapMutations, mapGetters } from 'vuex'
+import { computed, defineComponent } from 'vue'
+import { mapMutations, mapGetters, useStore } from 'vuex'
+import { GameStoreKey } from '@/stores'
 import { IStatus } from '@/IType'
 
 export default defineComponent({
-  data() {
+  setup: () => {
+    const { state, commit } = useStore(GameStoreKey)
     return {
-      IStatus
+      IStatus,
+      status: computed(() => state.status),
+      timeCost: computed(() => state.timeCost),
+      reset: () => commit('reset')
     }
-  },
-  computed: mapGetters(['status', 'timeCost']),
-  methods: mapMutations(['reset'])
+  }
 })
 </script>
 
