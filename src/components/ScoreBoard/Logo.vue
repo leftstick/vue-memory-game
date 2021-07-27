@@ -1,8 +1,6 @@
 <template>
   <h1 class="logo">
-    <a href="https://github.com/leftstick/vue-memory-game" target="_blank"
-      >Memory</a
-    >
+    <a href="https://github.com/leftstick/vue-memory-game" target="_blank">Memory</a>
   </h1>
 </template>
 
