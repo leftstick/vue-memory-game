@@ -9,7 +9,6 @@
 
     <meta name="renderer" content="webkit"/>
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-
 </head>
 <body>
     <div id="application"></div>
