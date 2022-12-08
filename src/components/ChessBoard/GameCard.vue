@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import { toRefs, defineProps, defineEmits } from 'vue'
+import { toRefs } from 'vue'
 import { useStore } from 'vuex'
 import type { ICard } from '@/IType'
 import { GameStoreKey } from '@/stores'

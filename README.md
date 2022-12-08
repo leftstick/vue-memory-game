@@ -17,13 +17,13 @@ A tiny game written in `vue3`. It's inspired by IgorMinar's [Memory-Game](https:
 
 ## Components break down
 
-1. `Game`, the whole game board
-2. `ScoreBoard`, the panel on the top, including "Logo", "Progress", "Highest Record"
-3. `Logo`, on the left of `ScoreBoard`, showing the game Logo
-4. `Progress`, on the center of `ScoreBoard`, showing the current matching information
-5. `Score`, on the right of `ScoreBoard`, showing the best result
-6. `ChessBoard`, on the center of `Game`, the playing area
-7. `Card`, each card in the `Chessboard`
+1. `MemoryGame`, the whole game board
+2. `ScoreBoard`, the panel on the top, including "GameLogo", "ProgressBar", "GameScore"
+3. `GameLogo`, on the left of `ScoreBoard`, showing the game Logo
+4. `ProgressBar`, on the center of `ScoreBoard`, showing the current matching information
+5. `GameScore`, on the right of `ScoreBoard`, showing the best result
+6. `ChessBoard`, on the center of `MemoryGame`, the playing area
+7. `GameCard`, each card in the `Chessboard`
 8. `GameStatus`, the footer part, displaying current status of game
 
 ## File Structure
@@ -38,29 +38,30 @@ vue-memory-game
 │   │
 │   ├── components
 │   │   ├── ChessBoard
-│   │   │   ├── Card.vue
+│   │   │   ├── GameCard.vue
 │   │   │   └── index.vue
 │   │   ├── ScoreBoard
 │   │   │   ├── index.vue
-│   │   │   ├── Logo.vue
-│   │   │   ├── Progress.vue
-│   │   │   └── Score.vue
+│   │   │   ├── GameLogo.vue
+│   │   │   ├── ProgressBar.vue
+│   │   │   └── GameScore.vue
 │   │   ├── GameStatus.vue
-│   │   └── Game.vue
+│   │   └── index.vue
 │   │
 │   ├── stores
 │   │   ├── CountTimer.ts
 │   │   ├── GameStore.ts
 │   │   └── index.ts
 │   │
-│   ├── Game.vue
+│   ├── MemoryGame.vue
+│   ├── constants.ts
 │   ├── IType.ts
-│   ├── main.ts
-│   ├── shims-vue.d.ts
-│   └── vite-env.d.ts
+│   └── main.ts
 │
 ├── index.html
+├── env.d.ts
 ├── package.json
+├── tsconfig.config.json
 ├── tsconfig.json
 └── vite.config.ts
 ```
@@ -73,8 +74,8 @@ vue-memory-game
 
 ### Running Environment
 
-- [node.js](https://nodejs.org/en/), version `>=10`
-- [yarn](https://classic.yarnpkg.com/lang/en/), version `~1`
+- [node.js](https://nodejs.org/en/), version `>=16`
+- [pnpm](https://pnpm.io/installation), version `~7`
 
 ### Recommended Editor
 
