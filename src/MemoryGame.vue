@@ -6,22 +6,15 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, onMounted } from 'vue'
+<script lang="ts" setup>
+import { onMounted } from 'vue'
 import { useStore } from 'vuex'
 import { ScoreBoard, ChessBoard, GameStatus } from '@/components'
-
 import { GameStoreKey } from '@/stores'
 
-export default defineComponent({
-  name: 'Game',
-  setup: () => {
-    const { commit } = useStore(GameStoreKey)
-    onMounted(() => {
-      commit('reset')
-    })
-  },
-  components: { ScoreBoard, ChessBoard, GameStatus }
+const { commit } = useStore(GameStoreKey)
+onMounted(() => {
+  commit('reset')
 })
 </script>
 

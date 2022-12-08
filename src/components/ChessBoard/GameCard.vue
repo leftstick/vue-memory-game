@@ -15,43 +15,30 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, toRefs, PropType } from 'vue'
+<script lang="ts" setup>
+import { toRefs, defineProps, defineEmits } from 'vue'
 import { useStore } from 'vuex'
-import { ICard } from '@/IType'
+import type { ICard } from '@/IType'
 import { GameStoreKey } from '@/stores'
 
-export default defineComponent({
-  name: 'Card',
-  props: {
-    card: {
-      type: Object as PropType<ICard>,
-      required: true
-    }
-  },
-  emits: {
-    onFlip: (payload: ICard) => {
-      return !!payload
-    }
-  },
-  setup: (props, context) => {
-    const { card } = toRefs(props)
-    const { commit } = useStore(GameStoreKey)
+interface IGameCardProps {
+  card: ICard
+}
 
-    const doFlip = (e: MouseEvent) => {
-      if (card.value.flipped) {
-        return
-      }
-      commit('flips', [card.value])
-      context.emit('onFlip', card.value)
-    }
+const props = defineProps<IGameCardProps>()
 
-    return {
-      card,
-      doFlip
-    }
+const emit = defineEmits(['onFlip'])
+
+const { card } = toRefs(props)
+const { commit } = useStore(GameStoreKey)
+
+const doFlip = () => {
+  if (card.value.flipped) {
+    return
   }
-})
+  commit('flips', [card.value])
+  emit('onFlip', card.value)
+}
 </script>
 
 <style scoped>

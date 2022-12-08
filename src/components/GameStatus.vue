@@ -7,23 +7,17 @@
   </div>
 </template>
 
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
+<script lang="ts" setup>
+import { computed } from 'vue'
 import { useStore } from 'vuex'
 import { GameStoreKey } from '@/stores'
-import { IStatus } from '@/IType'
+import { IStatus } from '@/constants'
 
-export default defineComponent({
-  setup: () => {
-    const { state, commit } = useStore(GameStoreKey)
-    return {
-      IStatus,
-      status: computed(() => state.status),
-      timeCost: computed(() => state.timeCost),
-      reset: () => commit('reset')
-    }
-  }
-})
+const { state, commit } = useStore(GameStoreKey)
+
+const status = computed(() => state.status)
+const timeCost = computed(() => state.timeCost)
+const reset = () => commit('reset')
 </script>
 
 <style scoped>

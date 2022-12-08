@@ -1,4 +1,5 @@
-import { ALL_CARD_NAMES, ICard } from '@/IType'
+import { ALL_CARD_NAMES } from '@/constants'
+import type { ICard } from '@/IType'
 
 function id(length: number) {
   const result = []
@@ -29,7 +30,7 @@ export function saveHighestRecord(score: number): void {
 }
 
 export function shuffleAllCards(): ICard[] {
-  let newCards: ICard[] = [...ALL_CARD_NAMES, ...ALL_CARD_NAMES].map(name => ({
+  const newCards: ICard[] = [...ALL_CARD_NAMES, ...ALL_CARD_NAMES].map((name) => ({
     id: id(8),
     flipped: false,
     name

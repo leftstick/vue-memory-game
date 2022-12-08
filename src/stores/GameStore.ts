@@ -1,6 +1,7 @@
-import { InjectionKey } from 'vue'
+import type { InjectionKey } from 'vue'
 import { createStore, Store } from 'vuex'
-import { ICard, IState, IStatus } from '@/IType'
+import { IStatus } from '@/constants'
+import type { ICard, IState } from '@/IType'
 import { getHighestRecord, saveHighestRecord, shuffleAllCards } from '@/helper'
 import CountTimer from './CountTimer'
 
@@ -17,11 +18,11 @@ const GameStore = createStore<IState>({
     }
   },
   getters: {
-    nonMatchedPairs: s => s.nonMatchedPairs,
-    highestRecord: s => s.highestRecord,
-    status: s => s.status,
-    cards: s => s.cards,
-    timeCost: s => s.timeCost
+    nonMatchedPairs: (s) => s.nonMatchedPairs,
+    highestRecord: (s) => s.highestRecord,
+    status: (s) => s.status,
+    cards: (s) => s.cards,
+    timeCost: (s) => s.timeCost
   },
   actions: {
     updateStatus: (context, status: IStatus) => {
@@ -36,14 +37,14 @@ const GameStore = createStore<IState>({
     }
   },
   mutations: {
-    reset: state => {
+    reset: (state) => {
       state.nonMatchedPairs = 8
       state.highestRecord = getHighestRecord()
       state.cards = shuffleAllCards()
       state.status = IStatus.READY
       state.timeCost = 0
     },
-    counting: state => {
+    counting: (state) => {
       state.timeCost = state.timeCost + 1
     },
     updateNonMatchedPairs: (state, payload) => {
@@ -51,8 +52,8 @@ const GameStore = createStore<IState>({
     },
     flips: (state, cards: ICard[]) => {
       state.cards
-        .filter(c => cards.some(cc => cc.id === c.id))
-        .forEach(c => {
+        .filter((c) => cards.some((cc) => cc.id === c.id))
+        .forEach((c) => {
           c.flipped = !c.flipped
         })
     },

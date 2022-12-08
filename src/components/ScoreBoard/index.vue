@@ -1,25 +1,20 @@
 <template>
   <div class="score-board">
-    <Logo />
-    <Progress />
-    <Score />
+    <GameLogo />
+    <ProgressBar />
+    <GameScore />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import Logo from './Logo.vue'
-import Progress from './Progress.vue'
-import Score from './Score.vue'
-
-export default defineComponent({
-  name: 'ScoreBoard',
-  components: {
-    Logo,
-    Progress,
-    Score
-  }
-})
+export default {
+  name: 'ScoreBoard'
+}
+</script>
+<script lang="ts" setup>
+import GameLogo from './GameLogo.vue'
+import GameScore from './GameScore.vue'
+import ProgressBar from './ProgressBar.vue'
 </script>
 
 <style scoped>

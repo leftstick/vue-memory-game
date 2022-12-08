@@ -1,28 +1,22 @@
 <template>
-  <div class="board">
-    <span>Cards not Matched</span>
-    <h2>{{ nonMatchedPairs }}</h2>
+  <div class="score">
+    <span>Highest Record</span>
+    <h2>{{ highestRecord }}</h2>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed } from 'vue'
+<script lang="ts" setup>
+import { computed } from 'vue'
 import { useStore } from 'vuex'
 import { GameStoreKey } from '@/stores'
 
-export default defineComponent({
-  name: 'Progress',
-  setup: () => {
-    const { state } = useStore(GameStoreKey)
-    return {
-      nonMatchedPairs: computed(() => state.nonMatchedPairs)
-    }
-  }
-})
+const { state } = useStore(GameStoreKey)
+
+const highestRecord = computed(() => state.highestRecord)
 </script>
 
 <style scoped>
-.board {
+.score {
   width: 120px;
   height: 100px;
   padding: 10px;
@@ -47,22 +41,21 @@ h2 {
   color: #fff;
 }
 @media screen and (max-width: 450px) {
-  .board {
+  .score {
     width: 105px;
   }
   span {
     font-size: 17px;
   }
 }
-
 @media screen and (max-width: 380px) {
-  .board {
+  .score {
     width: 95px;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .board {
+  .score {
     width: 90px;
   }
   span {
